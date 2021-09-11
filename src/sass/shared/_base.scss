@@ -1,0 +1,168 @@
+html {
+    scroll-behavior: smooth;
+
+    &[data-theme='dark'] {
+        --background-color: #000;
+        --color-headings: #FFF;
+        --color-text: #FFF;
+        --image-invert: invert(1);
+        --header-background-color: rgba( 0, 0, 0, .85 );
+        --footer-background-color: #3b3b3b;
+    }
+
+    &[data-theme='light'] {
+        --background-color: #FFF;
+        --color-headings: #000;
+        --color-text: #000;
+        --image-invert: invert(0);
+        --header-background-color: rgba( 255, 255, 255, .85 );
+        --footer-background-color: #999999;
+    }
+}
+
+// Scroll bar
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: var(--background-color);
+}
+   
+::-webkit-scrollbar-thumb {
+    background: $gh-gradient-Y; 
+    border-radius: 10px;
+
+    @include hover-et-all {
+        background: $gh-blue; 
+    }
+}
+
+body {
+    font-family: $font-family-base;
+    background-color: var(--background-color);
+    box-sizing: border-box;
+    position: relative;
+    color: var( --color-text);
+}
+
+#content {
+    z-index: 0;
+    position: relative;
+    padding: 70px 0 4rem;
+
+    @include media-breakpoint-up(xxl) {
+        padding: 90px 0 4rem;
+    }
+
+    &.modal-full-height {
+        @include media-breakpoint-down(md) {
+            max-height: 100vh;
+            overflow: hidden;
+        }
+    }
+}
+
+/* Titles and text */
+:is(h1, h2, h3, h4, h5, h6) {
+    font-weight: $font-weight-black;
+}
+
+@include media-breakpoint-down(md) {
+    .text-center-mobile {
+        text-align: center;
+    }
+}
+
+.gradient-underline {
+    position: relative;
+    margin-bottom: 2em;
+
+    @include media-breakpoint-down(md) {
+        display: flex;
+    }
+
+    &:after {
+        content: '';
+        display: inline-block;
+        height: 5px;
+        background: $gh-gradient;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+    }
+
+    &.very-long-title {
+        width: 30%;
+        text-indent: -2em;
+        margin-left: 2em;
+    
+        &:after {
+            width: 8em;
+            transform: translateY(-1.5rem);
+            margin: 0 6rem; 
+            bottom: -35px;
+        }
+    
+        @include media-breakpoint-down(md) {
+            text-indent: -1.5em;
+            width: 70%;
+        }
+    }
+    
+    &.short-title {
+        width: 20%;
+        margin-left: .5em;
+
+        &:after {
+            width: 8em;
+            margin: 0 2rem; 
+            left: 4em;
+        }
+    }
+
+    &.very-short-title {
+        width: 20%;
+        margin-left: .5em;
+
+        &:after {
+            width: 5em;
+            margin: 0 2rem; 
+            left: 1em;
+        }
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+// Buttons
+.btn {
+    transition: $transition-base;  
+    padding: 1rem 2rem;
+
+    &.btn-gradient {
+        border-color: $gh-blue;
+        color: var( --color-text);
+
+        @include hover-et-all {
+            background: $gh-gradient;
+            font-weight: $font-weight-black;
+        }
+    }
+
+    &.btn-download {
+        display: flex;
+        flex-direction: row;
+        
+        @include zoom-in-hover;
+
+        .icon {
+            max-height: 20px;
+            max-width: 20px;
+            margin-left: 15px;
+            filter: var(--image-invert);
+        }
+    }
+} 

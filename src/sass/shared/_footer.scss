@@ -1,0 +1,49 @@
+//
+// Footer and Navbar
+//
+
+#footer {
+    background-color: var(--footer-background-color);
+    position: relative;
+    z-index: 2;
+    padding: 2rem 0;
+
+    .footer-grid {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+
+        @include media-breakpoint-down(md) {
+            display: grid;
+
+            .copyright {
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style-type: none;
+        margin-bottom: 0;
+        grid-gap: 1rem;
+
+        @include media-breakpoint-down(md) {
+            justify-content: center;
+        }
+
+        .nav-link {
+            @include link-hover;
+        }
+
+        .icon {
+            max-width: 40px;
+            max-height: 40px;
+            filter: var(--image-invert);
+        }
+    }
+}

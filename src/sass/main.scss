@@ -1,0 +1,26 @@
+//
+// Site Styles
+//
+
+// --------------------------------------------------------------
+// Tools, Variables and Mixins
+// --------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/functions";
+@import "settings/variables";
+// @import "../../node_modules/bootstrap/scss/bootstrap";
+// @import "../../node_modules/bootstrap/scss/variables";
+@import "settings/mixins";
+@import "settings/fonts";
+
+// --------------------------------------------------------------
+// CSS and Components
+// --------------------------------------------------------------
+@import "shared/base";
+@import "shared/header";
+@import "shared/footer";
+
+// --------------------------------------------------------------
+// Layout
+// --------------------------------------------------------------
+@import "shared/page-home";
+@import "shared/modal-project";

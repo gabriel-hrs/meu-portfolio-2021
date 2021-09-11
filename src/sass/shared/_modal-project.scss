@@ -1,0 +1,287 @@
+
+// Project Modal
+.content-modal {
+    background: $gh-gradient;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    transition: $transition-base;
+    z-index: 9999;    
+    will-change: transform,opacity;
+    overflow: auto;
+
+    @include media-breakpoint-down(md) {
+        display: flex;
+        flex-direction: column-reverse;
+        position: absolute;
+        max-height: fit-content;
+        overflow: hidden;
+    }
+    
+    // Modal animations
+    &.start-d-none {
+        display: none;
+    }
+
+    &.close-modal {
+        animation: hide-modal .5s cubic-bezier(0.89, 0.03, 0.58, 1) forwards;
+        pointer-events: none;
+        transform: translateX(130vw);
+    }
+
+    &.open-modal {
+        animation: show-modal 1s cubic-bezier(0.89, 0.03, 0.58, 1) forwards;
+    }
+
+    &#priscila-kiguchi–microfisioterapia-content,
+    &#integracao-content {
+        .image {
+            grid-column: 1 / span 2;
+        }
+
+        .information-content {
+            @include media-breakpoint-down(md) {
+                margin-left: 0;
+                margin-right: 0;
+
+                .section-title {
+                    hyphens: auto;
+                }
+            }
+        }
+    }
+
+    &#acessibilidade-e-usabilidade-content,
+    &#revista-master-content {
+        .information-content {
+            @include media-breakpoint-down(md) {
+                padding-top: 5rem;
+            }
+        }
+    }
+
+    &#interacao-humano-computador-content {
+        .section-title {
+            @include media-breakpoint-down(md) {
+                text-indent: 0;
+                margin-left: 0;
+            }
+        }
+    }
+    
+    @keyframes hide-modal {
+        0% {
+            transform: translateX(0vw);
+        }
+        100% {
+            transform: translateX(130vw);
+        }
+    }
+        
+    @keyframes show-modal {
+        0% {
+            transform: translateX(130vw);
+            
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    // Loader
+    .loader {
+        background-color: var(--background-color);
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        z-index: 10000;
+        animation: hide-loader 2.5s ease-in-out 1s forwards;
+
+        @include media-breakpoint-down(md) {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        &.no-opacity {
+            opacity: 0;
+            display: none;
+        }
+    }
+
+    .loader-icon {
+        filter: var(--image-invert);
+    }
+        
+    @keyframes hide-loader {
+        0% {
+            opacity: 1;
+            
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    // Modal images
+    .images-content {
+        padding: 4rem 0;
+
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            max-width: 50vw;
+            min-height: 100vh;
+            grid-column: 1;
+        }
+
+        @include media-breakpoint-down(md) {
+            position: relative;
+
+            .pdf {
+                display: none;
+            }
+        }
+
+        &.bg-red {
+            background-color: rgba( $gh-red, .5);
+        }
+
+        &.bg-blue {
+            background-color: rgba( $gh-blue, .5);
+        }
+
+        .section-grid {
+            margin: 0 1.5rem;
+            padding-bottom: 3rem;
+            display: grid;
+            grid-gap: 2rem;
+            grid-auto-flow: dense;
+
+            @include media-breakpoint-up(lg) {
+                margin: 0 3rem;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .image {
+            max-width: 100%;
+            object-fit: contain;
+            box-shadow: 5px 5px 22px 5px rgba(0, 0, 0, .4);
+        }
+
+        .slides {
+            border: 1px solid #CCC; 
+            max-width: 100%;
+            box-shadow: 5px 5px 22px 5px rgba(0, 0, 0, .4);
+            
+            @include media-breakpoint-up(lg) {
+                grid-column: 1 / span 2;
+            }
+        }
+
+        .video,
+        .pdf {
+            max-width: 100%;
+            box-shadow: 5px 5px 22px 5px rgba(0, 0, 0, .4);
+
+            @include media-breakpoint-up(lg) {
+                grid-column: 1 / span 2;
+            }
+        }
+
+        .mansonry {
+            @include media-breakpoint-up(lg) {
+                margin-top: 5rem;
+                grid-row: span 2;
+            }
+        }
+    }
+
+    // Modal texts
+    .information-content {
+        background-color: var(--background-color);
+        padding: 3rem 1rem 1rem;
+
+        @include media-breakpoint-up(lg) {
+            top: 0;
+            position: sticky;
+            height: 100%;
+            min-height: fit-content;
+            grid-column: 2;
+            padding: 1rem;
+        }
+
+        .section-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            @include media-breakpoint-up(lg) {
+                height: 100vh;
+            }
+
+            .desktop {
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
+            }
+
+            .mobile {
+                @include media-breakpoint-up(lg) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .section-title {
+        &:after {
+            content: '';
+            display: inline-block;
+            max-width: 10em;
+            width: 100%;
+            height: 5px;
+            transform: translateY(-1.5rem);
+            margin: 0 6rem; 
+            background: $gh-gradient;
+        }
+
+        &.very-long-title {  
+            min-width: 70%;
+            margin-bottom: 0;
+        }
+    }
+
+    .section-meta {
+        font-size: $font-size-sm;
+        font-style: italic;
+
+        @include media-breakpoint-down(md) {
+            margin: 1rem 0;
+        }
+    }
+
+    .btn-close-modal {
+        max-width: 50px;
+        max-height: 50px;
+        background-color: transparent;
+        border-color: transparent;
+        font-size: 25px;
+        color: var(--color-text);
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        z-index: 1;
+        font-weight: $font-weight-black;
+
+        @include image-hover;
+    }
+}

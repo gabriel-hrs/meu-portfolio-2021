@@ -1,0 +1,252 @@
+//
+// Home page
+//
+
+.home-page {
+    // Initial Banner
+    .initial-banner {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-gap: 4rem;
+        place-items: center;
+
+        @include media-breakpoint-down(md) {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            margin: 6rem 0;
+            grid-gap: 0rem;
+
+            .banner-text {                
+                max-width: calc( 100vw - 30px );
+            }
+        }
+    }
+
+    .my-photo {
+        position: relative;	
+        display: flex;
+        justify-content: end;
+        transition: $transition-base;  
+        z-index: 1;
+
+        @include media-breakpoint-up(lg) {
+            margin-right: 60px;
+        }
+
+        .image {
+            transition: $transition-base;  
+            transition-delay: .1s;
+
+            @include media-breakpoint-down(md) {
+                max-width: calc(100vw - 30px);
+            }
+        }
+        
+        @include hover-et-all {
+            .image {
+                filter: grayscale(1);
+            }
+            
+            .light-effect {
+                filter: blur(2px);
+            }
+            
+            .light-effect-before {
+                left: 0 !important;
+            }
+
+            .light-effect-after {
+                right: 50px !important;
+            }
+        }
+        
+        .light-effect {
+            position: absolute;
+            width: 500px;
+            transition: $transition-base; 
+            pointer-events: none; 
+            
+            @include media-breakpoint-down(md) {
+                width: 350px;
+            }
+
+            &.light-effect-before {
+                height: 400px;
+                top: -100px;
+                left: -50px;
+                transform: rotatex(180deg);
+                transition-delay: .1s;
+                z-index: -1;
+
+                @include media-breakpoint-down(md) {
+                    height: 300px;
+                    left: -70px;
+                    top: -40px;
+                }
+            }
+            
+            &.light-effect-after {
+                bottom: -50px;
+                right: -50px;
+                transition-delay: .3s;
+                
+                @include media-breakpoint-down(md) {
+                    right: -30px;
+                    bottom: -30px;
+                }
+            }
+        }
+    }
+}
+
+// Portfólio projects
+.projects-section {
+    @include media-breakpoint-down(md) {
+        overflow: hidden;
+    }
+
+    .section-grid {
+        grid-gap: 2rem;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 4rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        }
+
+        @include media-breakpoint-down(md) {
+            display: flex;
+            flex-direction: column;
+            max-width: calc(100vw - 30px);
+            margin: 0 auto 2rem;
+        }
+    }
+
+    .project-item {
+        transition: $transition-base;  
+        position: relative;
+        height: fit-content;
+
+        &:before, 
+        &:after {
+            background: $gh-gradient;
+        }
+    
+        &:before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: $white;
+            z-index: 0;
+            background: $gh-gradient;
+        }
+        
+        &:after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: $white;
+            z-index: 0;
+            filter: blur(5px);
+            background: $gh-gradient;
+        }
+
+        &.mansonry {
+            @include media-breakpoint-up(lg) {
+                grid-row: span 2;
+            }
+        }
+
+        @include hover-et-all {            
+            .image {
+                opacity: .1;
+                transform: scale(1.05);
+            }
+
+            .project-text {
+                opacity: 1;
+            }
+        }
+
+        .project-link {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $black;
+            z-index: 1;
+            padding: 1rem;
+        }
+
+        .image {
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: $transition-base;  
+        }
+    
+        .project-text {
+            opacity: 0;
+            color: $white;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            transition: $transition-base;  
+            max-width: 90%;
+        }
+
+        .project-description {
+            font-style: $font-size-sm;
+            font-style: italic;
+        }
+    }
+}
+
+// About section
+.about-section {
+    @include media-breakpoint-up(lg) {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        place-items: center;
+        padding-bottom: 4rem;
+    }
+
+    @include media-breakpoint-down(md) {
+        display: flex;
+        flex-direction: column;
+        max-width: calc(100vw - 30px);
+        margin: 2rem auto 0;
+        text-align: center;
+
+        .section-text {
+            max-width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            max-width: fit-content;
+            margin: 0 auto;
+        }
+    }
+
+    .section-link {
+        .section-description {  
+            text-align: center;
+
+            @include media-breakpoint-up(lg) {
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}

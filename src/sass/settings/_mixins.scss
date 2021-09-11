@@ -1,0 +1,149 @@
+/**
+ * Mixins
+*/
+
+// Name of the next breakpoint, or null for the last breakpoint.
+@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+	$n: index($breakpoint-names, $name);
+	@if not $n {
+		@error "breakpoint `#{$name}` not found in `#{$breakpoints}`";
+	}
+	@return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}
+  
+// Minimum breakpoint width. Null for the smallest (first) breakpoint.
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+	$min: map-get($breakpoints, $name);
+	@return if($min != 0, $min, null);
+}
+  
+// Maximum breakpoint width.
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+	$max: map-get($breakpoints, $name);
+	@return if($max and $max > 0, $max - .02, null);
+}
+  
+// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+	@return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+}
+
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+	$min: breakpoint-min($name, $breakpoints);
+	@if $min {
+		@media (min-width: $min) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+	$max: breakpoint-max($name, $breakpoints);
+	@if $max {
+		@media (max-width: $max) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+// Media that spans multiple breakpoint widths.
+@mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
+	$min: breakpoint-min($lower, $breakpoints);
+	$max: breakpoint-max($upper, $breakpoints);
+
+	@if $min != null and $max != null {
+		@media (min-width: $min) and (max-width: $max) {
+			@content;
+		}
+	} @else if $max == null {
+		@include media-breakpoint-up($lower, $breakpoints) {
+			@content;
+		}
+	} @else if $min == null {
+		@include media-breakpoint-down($upper, $breakpoints) {
+			@content;
+		}
+	}
+}
+
+// Media between the breakpoint's minimum and maximum widths.
+@mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
+	$min:  breakpoint-min($name, $breakpoints);
+	$next: breakpoint-next($name, $breakpoints);
+	$max:  breakpoint-max($next);
+
+	@if $min != null and $max != null {
+		@media (min-width: $min) and (max-width: $max) {
+			@content;
+		}
+	} @else if $max == null {
+		@include media-breakpoint-up($name, $breakpoints) {
+			@content;
+		}
+	} @else if $min == null {
+		@include media-breakpoint-down($next, $breakpoints) {
+			@content;
+		}
+	}
+}
+
+// Styles on hover, active and focus element states
+@mixin hover-et-all {
+	&:hover,
+	&:active,
+	&:focus {
+		@content;
+	}
+}
+
+// Opacity smooth animation for images inside links on hover state
+@mixin image-hover {
+	transition: all .3s ease-in-out;
+
+	@include hover-et-all() {
+		opacity: .7;
+	}
+}
+
+// Size smooth animation for images inside links on hover state
+@mixin zoom-out-hover {
+	transition: all .3s ease-in-out;
+
+	@include hover-et-all() {
+		transform: scale(.9);
+	}
+}
+
+// Size smooth animation for images inside links on hover state
+@mixin zoom-in-hover {
+	transition: all .3s ease-in-out;
+
+	@include hover-et-all() {
+		transform: scale(1.1);
+	}
+}
+
+// Opacity and size smooth animation for links on hover state
+@mixin link-hover {
+	transition: all .3s ease-in-out;
+
+	@include hover-et-all() {
+		transform: scale(.9);
+		opacity: .7;
+	}
+}
+
+// One side only container margin
+@mixin one-side-container-margin( $property: margin-left, $offset: 15px ) {
+	@each $breakpoint, $container-max-width in $container-max-widths {
+		@include media-breakpoint-up( $breakpoint, $grid-breakpoints ) {
+		  #{$property}: calc( ( 100vw - #{$container-max-width} ) / 2 + #{$offset} );
+		}
+	}
+}

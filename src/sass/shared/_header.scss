@@ -1,0 +1,284 @@
+//
+// Header and Navbar
+//
+
+#header {
+    position: relative;
+    z-index: 2;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    transition: $transition-base;
+
+    // Cabeçalho quando encolhe
+    &.nav-shrink {
+        max-height: 65px;
+        background-color: var(--header-background-color);
+
+        @include media-breakpoint-up(xxl) {
+            max-height: 70px;
+        }
+
+        .navbar-brand {
+            .image {
+                // max-width: 8rem;
+                height: 40px;
+                
+                @include media-breakpoint-up(xxl) {
+                    max-width: 5rem;
+                }
+            }
+
+            .design {
+                margin-top: 1.7rem;
+                animation: logo-copy-hide .5s ease-in-out forwards;
+            }
+        }
+    }
+
+    // Cabeçalho quando cresce
+    &.nav-expand {
+        max-height: 90px;
+
+        @include media-breakpoint-up(xxl) {
+            max-height: 90px;
+        }
+
+        .navbar-brand {
+            .image {
+                height: inherit;
+                // max-width: 13rem;
+                
+                @include media-breakpoint-up(xxl) {
+                    max-width: 16rem;
+                }
+            }
+
+            .logo-animate-g {
+                path {
+                    &.stroke {
+                        animation: line-animation-g 2s ease-in-out .3s;
+                        animation-iteration-count: infinite;
+                    }
+    
+                    &.fill {
+                        animation: fill-animation-g 2s ease-in-out .2s;
+                        animation-iteration-count: infinite;
+                    }
+                }
+            }
+    
+            .logo-animate-h {
+                path {
+                    &.stroke {
+                        animation: line-animation-h 2s ease-in-out .3s;
+                        animation-iteration-count: infinite;
+                    }
+    
+                    &.fill {
+                        animation: fill-animation-h 2s ease-in-out .3s;
+                        animation-iteration-count: infinite;
+                    }   
+                }
+            }
+
+            .design {
+                animation-direction: alternate;
+            }
+        }
+        
+        .nav-link {
+            grid-gap: 1rem;
+        }
+    }
+
+    // Menu
+    .navbar {
+        justify-content: space-between;
+        height: 100%;
+
+        .navbar-collapse {
+            justify-content: end;
+
+            @include media-breakpoint-down(md) {
+                padding: 1rem;
+                background-color: var(--header-background-color);
+            }
+        }
+    }
+
+    // Logo
+    .navbar-brand {
+        @include link-hover;
+        display: inline-flex;
+
+        @include media-breakpoint-down(md) {
+            max-width: 60%;
+        }
+
+        .image {
+            transition: $transition-base;
+            width: fit-content;
+            
+            @include media-breakpoint-down(md) {
+                max-width: 5rem;
+            }
+
+            path {
+                transition: $transition-base;
+            }
+        }
+
+        .logo-animate-g {
+            path {
+                &.stroke {
+                    stroke-dasharray: 352;
+                    stroke-dashoffset: 352;
+                }
+            }
+        }
+
+        .logo-animate-h {
+            path {
+                &.stroke {
+                    stroke-dasharray: 441;
+                    stroke-dashoffset: 441;
+                }
+            }
+        }
+            
+        @keyframes line-animation-g {
+            0% {
+                opacity: 1;
+                fill: transparent;
+            }
+            50% {
+                stroke-dashoffset: 0;
+            }
+            100% {
+                opacity: 0;
+                stroke: transparent;
+            }
+        }
+            
+        @keyframes fill-animation-g {
+            0% {
+                opacity: 0;
+                stroke: transparent;
+            }
+            100% {
+                opacity: 1;
+                fill: url(#paint_g_fill);
+            }
+        }
+            
+        @keyframes line-animation-h {
+            0% {
+                fill: transparent;
+            }
+            50% {
+                stroke-dashoffset: 0;
+            }
+            100% {
+                stroke: transparent;
+                fill: url(#paint_h_fill);
+            }
+        }
+            
+        @keyframes fill-animation-h {
+            0% {
+                opacity: 0;
+                stroke: transparent;
+            }
+            100% {
+                opacity: 1;
+                fill: url(#paint_h_fill);
+            }
+        }
+
+        .design {
+            font-size: $font-size-sm;
+            margin-top: 4rem;
+            margin-left: 1rem;
+            color: var( --color-text);
+
+            @include media-breakpoint-down(md) {
+                margin-top: 2rem;
+            }
+        }
+            
+        @keyframes logo-copy-hide {
+            to {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+        }
+    }
+
+    // Menu links
+    .nav-link {
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: $transition-base;     
+
+        @include media-breakpoint-down(md) {
+            padding: .5rem;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 150%;
+            transform: scaleX(0);
+            background: $gh-gradient;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        @include hover-et-all {
+            color: $gh-light-blue;
+            font-weight: $font-weight-black;
+            text-shadow: 5px 5px 5px rgba($gh-light-red, 60%);
+            
+            &:after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+        }
+    }
+
+    // Dark mode toggle
+    .btn-dark-mode {
+        border-color: transparent;
+        background-color: transparent;
+
+        @include zoom-out-hover;
+
+        .icon {
+            max-width: 25px;
+            max-height: 25px;
+            filter: var(--image-invert);
+        }
+    }
+
+    // Mobile menu toggle
+    .navbar-toggler-icon {
+        filter: var(--image-invert);
+    }
+}
+
+.navbar-light {
+    .navbar-nav {
+        .nav-link {
+            color: var( --color-text);
+            text-transform: uppercase;
+        }
+    }
+
+    .navbar-toggler {
+        border-color: var( --color-text);
+    }
+}
