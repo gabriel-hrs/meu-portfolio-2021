@@ -218,6 +218,14 @@
         grid-template-columns: repeat(2, 50%);
         place-items: center;
         padding-bottom: 4rem;
+        
+        .section-description {
+            a {
+                br {
+                    display: none;
+                }
+            }
+        }
     }
 
     @include media-breakpoint-down(md) {
@@ -241,12 +249,6 @@
     .section-link {
         .section-description {  
             text-align: center;
-
-            @include media-breakpoint-up(lg) {
-                br {
-                    display: none;
-                }
-            }
         }
     }
 }

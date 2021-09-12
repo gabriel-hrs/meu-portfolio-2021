@@ -760,6 +760,9 @@ body {
     place-items: center;
     padding-bottom: 4rem;
   }
+  .about-section .section-description a br {
+    display: none;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -782,12 +785,6 @@ body {
 
 .about-section .section-link .section-description {
   text-align: center;
-}
-
-@media (min-width: 992px) {
-  .about-section .section-link .section-description br {
-    display: none;
-  }
 }
 
 .content-modal {
