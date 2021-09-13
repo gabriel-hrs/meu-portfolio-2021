@@ -52,21 +52,6 @@ const hash_project_modals = [
     'priscila-kiguchi–microfisioterapia',
 ];
 
-// function toggleModal( project ) {
-//     if( $('#' + project + '-content').hasClass('open-modal') ){
-//         $('#' + project + '-content').toggleClass('close-modal').removeClass('open-modal');
-//         setInterval(
-//             function(){
-//                 $('#' + project + '-content').addClass('start-d-none');
-//             },
-//             3000
-//         );
-//     } else {
-//         // $('#' + project + '-content').removeClass('start-d-none');
-//         $('#' + project + '-content').toggleClass('close-modal').addClass('open-modal');
-//     }
-// }
-
 function toggleLoader() {
     if( $('.loader').hasClass('no-opacity') ) {
         $('.loader').removeClass('no-opacity');    
@@ -102,23 +87,15 @@ function hideModal( event ) {
     );
 }
 
-// hash_project_modals.forEach(project => {
-//     $('#' + project + '-link').on( 'click', toggleModal( project ) ); 
-//     $('#' + project + '-btn').on( 'click', toggleModal( project ) ); 
-// });
-
 hash_project_modals.forEach( project => {
-    // $('#' + project + '-link').on( 'click', showModal ); 
     $('#' + project + '-link').click( {project: project}, showModal );
     
-    // $('#' + project + '-btn').on( 'click', hideModal ); 
     $('#' + project + '-btn').click( {project: project}, hideModal );
 
     $(document).keyup( {project: project}, function( event ) {
         let link = event.data.project;
         if($('#' + link + '-content').hasClass('open-modal')) {
             if ( event.key == 'Escape' ) {
-                // console.log(event, hideModal, hideModal(project));
                 hideModal(event);
             }
         }
