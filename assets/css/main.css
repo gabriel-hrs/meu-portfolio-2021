@@ -613,8 +613,7 @@ body {
 }
 
 .home-page .my-photo .light-effect.light-effect-before {
-  height: 400px;
-  top: -100px;
+  top: 25px;
   left: -50px;
   transform: rotatex(180deg);
   transition-delay: .1s;
