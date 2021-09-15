@@ -21,11 +21,10 @@
 
         .navbar-brand {
             .image {
-                // max-width: 8rem;
                 height: 40px;
                 
                 @include media-breakpoint-up(xxl) {
-                    max-width: 5rem;
+                    max-width: 2.5rem;
                 }
             }
 
@@ -47,7 +46,6 @@
         .navbar-brand {
             .image {
                 height: inherit;
-                // max-width: 13rem;
                 
                 @include media-breakpoint-up(xxl) {
                     max-width: 16rem;
@@ -98,7 +96,7 @@
         height: 100%;
 
         .navbar-collapse {
-            justify-content: end;
+            justify-content: flex-end;
 
             @include media-breakpoint-down(md) {
                 padding: 1rem;

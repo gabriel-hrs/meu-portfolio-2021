@@ -71,6 +71,17 @@
             }
         }
     }
+
+    &#afronte-content {
+        .section-title {
+            &:after {
+                @include media-breakpoint-up(lg) {
+                    transform: translateY(0);    
+                    margin: 0 0 -1rem -2rem;
+                }
+            }
+        }
+    }
     
     @keyframes hide-modal {
         0% {
@@ -137,7 +148,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            max-width: 50vw;
+            width: 50vw;
             min-height: 100vh;
             grid-column: 1;
         }
@@ -175,6 +186,11 @@
             max-width: 100%;
             object-fit: contain;
             box-shadow: 5px 5px 22px 5px rgba(0, 0, 0, .4);
+
+            @include media-breakpoint-up(xxl) {
+                width: 100%;
+                height: auto;
+            }
         }
 
         .slides {
