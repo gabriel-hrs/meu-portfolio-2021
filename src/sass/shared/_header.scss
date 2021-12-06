@@ -213,7 +213,21 @@
         }
     }
 
-    // Menu links
+    // Menu items and links
+    .nav-item {
+        &.active {
+            color: $gh-light-blue;
+            font-weight: $font-weight-black;
+            text-shadow: 5px 5px 5px rgba($gh-light-red, 60%);
+
+            
+            &:after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+        }
+    }
+
     .nav-link {
         padding: 0 2rem;
         display: flex;
@@ -234,6 +248,18 @@
             background: $gh-gradient;
             transform-origin: bottom right;
             transition: transform 0.25s ease-out;
+        }
+
+        &.active {
+            color: $gh-light-blue;
+            font-weight: $font-weight-black;
+            text-shadow: 5px 5px 5px rgba($gh-light-red, 60%);
+
+            
+            &:after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
         }
 
         @include hover-et-all {

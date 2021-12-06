@@ -40,6 +40,23 @@ $('.btn-dark-mode').on( 'click', function() {
     }
 } ); 
 
+// Toggle active item menu
+$(window).scroll(function() { 
+    var initial_section = $( '.initial-banner' ).height();  
+    var projects_section = $( '.projects-section' ).height();    
+    var scroll = $( window ).scrollTop(); 
+
+    if ( scroll > projects_section ) {
+        $( '.nav-link' ).removeClass( 'active' );
+        $( '.nav-link[title="Sobre"]' ).addClass( 'active' );
+    } else if ( scroll > initial_section ) {
+        $( '.nav-link' ).removeClass( 'active' );
+        $( '.nav-link[title="Projetos"]' ).addClass( 'active' );
+    } else {
+        $( '.nav-link' ).removeClass( 'active' );
+    }
+});
+
 // Single project modal
 const hash_project_modals = [
     'addera',

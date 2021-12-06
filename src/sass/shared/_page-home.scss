@@ -126,6 +126,7 @@
         transition: $transition-base;  
         position: relative;
         height: fit-content;
+        cursor: pointer;
 
         &:before, 
         &:after {
