@@ -42,8 +42,8 @@ html {
 }
 
 dark-mode-toggle {
-  --dark-mode-toggle-light-icon: url(https://ghdesign.dev/assets/images/dark-mode.webp);
-  --dark-mode-toggle-dark-icon: url(https://ghdesign.dev/assets/images/light-mode.webp);
+  --dark-mode-toggle-light-icon: url(http://127.0.0.1/dev/meu-portfolio-2021/assets/images/dark-mode.webp);
+  --dark-mode-toggle-dark-icon: url(http://127.0.0.1/dev/meu-portfolio-2021/assets/images/light-mode.webp);
   --dark-mode-toggle-icon-size: 2rem;
   filter: invert(1);
 }
@@ -193,17 +193,28 @@ body {
   font-weight: 900;
 }
 
-.btn.btn-download {
+.btn.btn-outline-white {
+  border-color: #fff;
+  color: var(--color-text);
+}
+
+.btn.btn-outline-white:hover, .btn.btn-outline-white:active, .btn.btn-outline-white:focus {
+  background: linear-gradient(90deg, #272eaf 0%, #b2222d 100%);
+  font-weight: 900;
+}
+
+.btn.btn-icon {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   transition: all .3s ease-in-out;
 }
 
-.btn.btn-download:hover, .btn.btn-download:active, .btn.btn-download:focus {
+.btn.btn-icon:hover, .btn.btn-icon:active, .btn.btn-icon:focus {
   transform: scale(1.1);
 }
 
-.btn.btn-download .icon {
+.btn.btn-icon .icon {
   max-height: 20px;
   max-width: 20px;
   margin-left: 15px;

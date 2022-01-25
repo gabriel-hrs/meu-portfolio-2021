@@ -151,9 +151,20 @@ body {
         }
     }
 
-    &.btn-download {
+    &.btn-outline-white {
+        border-color: $white;
+        color: var( --color-text);
+
+        @include hover-et-all {
+            background: $gh-gradient;
+            font-weight: $font-weight-black;
+        }
+    }
+
+    &.btn-icon {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         
         @include zoom-in-hover;
 
