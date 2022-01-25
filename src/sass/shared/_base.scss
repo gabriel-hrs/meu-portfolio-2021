@@ -1,22 +1,21 @@
 html {
     scroll-behavior: smooth;
+    color-scheme: light dark;
+    supported-color-schemes: dark light;
+    transition: $transition-base;
+}
 
-    &[data-theme='dark'] {
-        --background-color: #000;
-        --color-headings: #FFF;
-        --color-text: #FFF;
-        --image-invert: invert(1);
-        --header-background-color: rgba( 0, 0, 0, .85 );
-        --footer-background-color: #3b3b3b;
-    }
+dark-mode-toggle {
+    --dark-mode-toggle-light-icon: url(http://127.0.0.1/dev/meu-portfolio-2021/assets/images/dark-mode.webp);
+    --dark-mode-toggle-dark-icon: url(http://127.0.0.1/dev/meu-portfolio-2021/assets/images/light-mode.webp); 
+    --dark-mode-toggle-icon-size: 2rem;
+    
+    filter: invert(1);
 
-    &[data-theme='light'] {
-        --background-color: #FFF;
-        --color-headings: #000;
-        --color-text: #000;
-        --image-invert: invert(0);
-        --header-background-color: rgba( 255, 255, 255, .85 );
-        --footer-background-color: #999999;
+    @include media-breakpoint-up(md) {
+        position: absolute;
+        top: 1.5rem;
+        right: 0;     
     }
 }
 

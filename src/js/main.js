@@ -27,18 +27,30 @@ var resizeHeader = () => {
 $(document).ready( function() {
     resizeHeader();
     $(window).scroll( resizeHeader );
+    verifyToggleDarkMode();
 });
 
-// Dark mode toggle
-$('.btn-dark-mode').on( 'click', function() {
-    $('.btn-dark-mode .icon').toggleClass('d-none');
+const darkModeToggle = document.querySelector('dark-mode-toggle');
 
-    if ( $('html').attr('data-theme') == 'light' ) {
+let verifyToggleDarkMode = () => {
+    if ( darkModeToggle.mode == 'light' ) {  
+        $('html').attr( 'data-theme', 'light' ); 
+    } else {
         $('html').attr( 'data-theme', 'dark' );
+    }
+}
+
+let toggleDarkMode = () => {
+    if ( darkModeToggle.mode == 'light' ) {  
+        $('html').attr( 'data-theme', 'dark' ); 
     } else {
         $('html').attr( 'data-theme', 'light' );
     }
-} ); 
+}
+
+$('#dark-mode-toggle').on('click', function () {
+    toggleDarkMode();
+});
 
 // Toggle active item menu
 $(window).scroll(function() { 

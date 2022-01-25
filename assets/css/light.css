@@ -1,0 +1,8 @@
+html[data-theme='light'] {
+    --background-color: #FFF;
+    --color-headings: #000;
+    --color-text: #000;
+    --image-invert: invert(0);
+    --header-background-color: rgba( 255, 255, 255, .85 );
+    --footer-background-color: #999999;
+}

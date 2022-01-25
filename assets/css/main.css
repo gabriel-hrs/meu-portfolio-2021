@@ -36,24 +36,24 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light dark;
+  supported-color-schemes: dark light;
+  transition: all 0.3s ease-in-out;
 }
 
-html[data-theme='dark'] {
-  --background-color: #000;
-  --color-headings: #FFF;
-  --color-text: #FFF;
-  --image-invert: invert(1);
-  --header-background-color: rgba( 0, 0, 0, .85 );
-  --footer-background-color: #3b3b3b;
+dark-mode-toggle {
+  --dark-mode-toggle-light-icon: url(http://127.0.0.1/dev/meu-portfolio-2021/assets/images/dark-mode.webp);
+  --dark-mode-toggle-dark-icon: url(http://127.0.0.1/dev/meu-portfolio-2021/assets/images/light-mode.webp);
+  --dark-mode-toggle-icon-size: 2rem;
+  filter: invert(1);
 }
 
-html[data-theme='light'] {
-  --background-color: #FFF;
-  --color-headings: #000;
-  --color-text: #000;
-  --image-invert: invert(0);
-  --header-background-color: rgba( 255, 255, 255, .85 );
-  --footer-background-color: #999999;
+@media (min-width: 768px) {
+  dark-mode-toggle {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -419,6 +419,10 @@ body {
   }
 }
 
+#header .nav-item {
+  min-width: 50px;
+}
+
 #header .nav-item.active {
   color: #5494da;
   font-weight: 900;
@@ -477,20 +481,19 @@ body {
   transform-origin: bottom left;
 }
 
-#header .btn-dark-mode {
+#header dark-mode-toggle {
   border-color: transparent;
   background-color: transparent;
   transition: all .3s ease-in-out;
 }
 
-#header .btn-dark-mode:hover, #header .btn-dark-mode:active, #header .btn-dark-mode:focus {
+#header dark-mode-toggle:hover, #header dark-mode-toggle:active, #header dark-mode-toggle:focus {
   transform: scale(0.9);
 }
 
-#header .btn-dark-mode .icon {
+#header dark-mode-toggle label:before {
   max-width: 25px;
   max-height: 25px;
-  filter: var(--image-invert);
 }
 
 #header .navbar-toggler-icon {

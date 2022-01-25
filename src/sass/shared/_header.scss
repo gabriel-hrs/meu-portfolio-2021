@@ -215,6 +215,8 @@
 
     // Menu items and links
     .nav-item {
+        min-width: 50px;
+        
         &.active {
             color: $gh-light-blue;
             font-weight: $font-weight-black;
@@ -275,16 +277,18 @@
     }
 
     // Dark mode toggle
-    .btn-dark-mode {
+    dark-mode-toggle {
         border-color: transparent;
         background-color: transparent;
 
         @include zoom-out-hover;
 
-        .icon {
-            max-width: 25px;
-            max-height: 25px;
-            filter: var(--image-invert);
+        label {
+            &:before {
+                max-width: 25px;
+                max-height: 25px;
+                // filter: var(--image-invert);
+            }
         }
     }
 
