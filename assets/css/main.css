@@ -516,6 +516,10 @@ body {
   border: none;
 }
 
+#header .language-item .dropdown-menu {
+  min-width: calc(100% + 1.5rem);
+}
+
 #header .language-item .image {
   width: 2rem;
   height: 2rem;

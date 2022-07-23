@@ -302,7 +302,11 @@
             background: none;
             border: none;
         }
-        
+
+        .dropdown-menu {
+            min-width: calc(100% + 1.5rem);
+        }
+
         .image {
             width: 2rem;
             height: 2rem;
