@@ -201,7 +201,7 @@
     
         .project-text {
             opacity: 0;
-            color: $white;
+            color: var(--color-text);
             position: absolute;
             display: flex;
             flex-direction: column;
