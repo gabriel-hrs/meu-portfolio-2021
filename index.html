@@ -94,9 +94,27 @@
     <noscript>
         <link href="https://ghdesign.dev/assets/css/main.min.css" rel="stylesheet" media="screen" />
     </noscript>
+    <link rel="preload" href="https://ghdesign.dev/assets/css/cookie-banner.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://ghdesign.dev/assets/css/cookie-banner.min.css" rel="stylesheet" media="screen" />
+    </noscript>
 </head>
 
 <body>
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-banner-popup modal fade show" tabindex="-1" aria-labelledby="exampleModalLabel" aria-modal="true" role="dialog"">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p>Usamos cookies para personalizar conteúdos e melhorar a sua experiência. Para mais informações, acesse o nosso <a href="https://ghdesign.dev/politica-de-privacidade">Aviso Externo de Privacidade.</a></p>
+                        <button type="button" id="btn-accept-cookies" class="btn btn-success">Aceitar e Prosseguir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
     <header id="header" class="nav-expand">

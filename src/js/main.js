@@ -136,3 +136,21 @@ hash_project_modals.forEach( project => {
         }
     });
 });
+
+// 
+// Cookie Banner
+//
+
+if( sessionStorage.getItem( 'cookie_banner' ) !== 'true' ) {
+    $('.cookie-banner-popup').modal({
+        backdrop: false,
+    }).modal('show');
+    $('body').removeClass('modal-open').css( 'overflow', 'scroll' );
+} 
+
+$("#btn-accept-cookies").on( 'click', function() {
+	$(".cookie-banner-popup").hide();
+    $('.modal-backdrop').hide();
+    $('body').removeClass('modal-open').css( 'overflow', 'scroll' );
+	sessionStorage.setItem( 'cookie_banner', 'true' );
+} );
