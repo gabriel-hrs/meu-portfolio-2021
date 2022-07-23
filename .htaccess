@@ -39,7 +39,7 @@ SetEnv session.use_cookies='1';
 	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteRule ^home/?$ index.html [NC,L]
 
-	RewriteRule ^en/?$ index.html [NC,L]
+	RewriteRule ^en/?$ index-en.html [NC,L]
 	RewriteRule ^politica-de-privacidade/?$ politica-de-privacidade.html [NC,L]
 	RewriteRule ^privacy-policy/?$ privacy-policy.html [NC,L]
 </IfModule>
