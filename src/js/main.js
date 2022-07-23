@@ -79,6 +79,12 @@ const hash_project_modals = [
     'integracao',
     'revista-master',
     'priscila-kiguchi–microfisioterapia',
+    'brunch',
+    'cerqueira-leite',
+    'tamarine',
+    'neoquimica',
+    'buscopan',
+    'buscofem',
 ];
 
 function toggleLoader() {

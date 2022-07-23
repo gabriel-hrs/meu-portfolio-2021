@@ -5,4 +5,5 @@ html[data-theme='light'] {
     --image-invert: invert(0);
     --header-background-color: rgba( 255, 255, 255, .85 );
     --footer-background-color: #999999;
+    --header-box-shadow: #00000026;
 }

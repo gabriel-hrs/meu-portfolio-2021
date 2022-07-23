@@ -51,7 +51,6 @@ dark-mode-toggle {
 @media (min-width: 768px) {
   dark-mode-toggle {
     position: absolute;
-    top: 1.5rem;
     right: 0;
   }
 }
@@ -222,7 +221,6 @@ body {
 }
 
 #header {
-  position: relative;
   z-index: 2;
   width: 100vw;
   position: fixed;
@@ -233,11 +231,19 @@ body {
 #header.nav-shrink {
   max-height: 65px;
   background-color: var(--header-background-color);
+  backdrop-filter: contrast(1);
+  box-shadow: 10px 5px 20px 3px var(--header-box-shadow);
 }
 
 @media (min-width: 1400px) {
   #header.nav-shrink {
     max-height: 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  #header.nav-shrink dark-mode-toggle {
+    top: 1rem;
   }
 }
 
@@ -263,6 +269,12 @@ body {
 @media (min-width: 1400px) {
   #header.nav-expand {
     max-height: 90px;
+  }
+}
+
+@media (min-width: 768px) {
+  #header.nav-expand dark-mode-toggle {
+    top: 1.5rem;
   }
 }
 
@@ -579,6 +591,7 @@ body {
   grid-template-columns: repeat(2, 50%);
   grid-gap: 4rem;
   place-items: center;
+  padding: 4rem 0;
 }
 
 @media (max-width: 767.98px) {
@@ -611,6 +624,13 @@ body {
 .home-page .my-photo .image {
   transition: all 0.3s ease-in-out;
   transition-delay: .1s;
+}
+
+@media (min-width: 992px) {
+  .home-page .my-photo .image {
+    max-height: 75vh;
+    object-fit: contain;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -761,7 +781,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #000000;
+  background-color: var(--background-color);
   z-index: 1;
   padding: 1rem;
 }
@@ -1089,6 +1109,10 @@ body {
   .content-modal .information-content .section-text .mobile {
     display: none;
   }
+}
+
+.content-modal .titulo-curto .section-title {
+  max-height: 45px;
 }
 
 .content-modal .section-title:after {

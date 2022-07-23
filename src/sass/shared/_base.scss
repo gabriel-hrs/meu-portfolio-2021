@@ -14,7 +14,6 @@ dark-mode-toggle {
 
     @include media-breakpoint-up(md) {
         position: absolute;
-        top: 1.5rem;
         right: 0;     
     }
 }
@@ -49,6 +48,7 @@ body {
     z-index: 0;
     position: relative;
     padding: 70px 0 4rem;
+    // overflow: hidden;
 
     @include media-breakpoint-up(xxl) {
         padding: 90px 0 4rem;
