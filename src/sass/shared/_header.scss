@@ -24,6 +24,10 @@
             dark-mode-toggle {
                 top: 1rem;
             }
+
+            .language-item {
+                height: 2rem;
+            }
         }
 
         .navbar-brand {
@@ -53,6 +57,10 @@
         @include media-breakpoint-up(md) {
             dark-mode-toggle {
                 top: 1.5rem;
+            }
+
+            .language-item {
+                height: 3rem;
             }
         }
 
@@ -286,6 +294,19 @@
                 transform: scaleX(1);
                 transform-origin: bottom left;
             }
+        }
+    }
+
+    .language-item {
+        .dropdown-toggle {
+            background: none;
+            border: none;
+        }
+        
+        .image {
+            width: 2rem;
+            height: 2rem;
+            object-fit: contain;
         }
     }
 

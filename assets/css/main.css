@@ -246,6 +246,9 @@ body {
   #header.nav-shrink dark-mode-toggle {
     top: 1rem;
   }
+  #header.nav-shrink .language-item {
+    height: 2rem;
+  }
 }
 
 #header.nav-shrink .navbar-brand .image {
@@ -276,6 +279,9 @@ body {
 @media (min-width: 768px) {
   #header.nav-expand dark-mode-toggle {
     top: 1.5rem;
+  }
+  #header.nav-expand .language-item {
+    height: 3rem;
   }
 }
 
@@ -503,6 +509,17 @@ body {
 #header .nav-link:hover:after, #header .nav-link:active:after, #header .nav-link:focus:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+#header .language-item .dropdown-toggle {
+  background: none;
+  border: none;
+}
+
+#header .language-item .image {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
 }
 
 #header dark-mode-toggle {
