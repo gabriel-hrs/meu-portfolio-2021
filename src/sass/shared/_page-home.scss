@@ -38,6 +38,7 @@
         .image {
             transition: $transition-base;  
             transition-delay: .1s;
+            object-fit: contain;
 
             @include media-breakpoint-up(lg) {
                 max-height: 75vh;
@@ -115,7 +116,7 @@
         grid-gap: 2rem;
 
         @include media-breakpoint-up(lg) {
-            margin-bottom: 4rem;
+            margin: 0 2px 4rem;
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
         }

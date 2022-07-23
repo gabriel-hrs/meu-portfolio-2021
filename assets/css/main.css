@@ -84,6 +84,7 @@ body {
   z-index: 0;
   position: relative;
   padding: 70px 0 4rem;
+  overflow-y: hidden;
 }
 
 @media (min-width: 1400px) {
@@ -624,6 +625,7 @@ body {
 .home-page .my-photo .image {
   transition: all 0.3s ease-in-out;
   transition-delay: .1s;
+  object-fit: contain;
 }
 
 @media (min-width: 992px) {
@@ -709,7 +711,7 @@ body {
 
 @media (min-width: 992px) {
   .projects-section .section-grid {
-    margin-bottom: 4rem;
+    margin: 0 2px 4rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   }
