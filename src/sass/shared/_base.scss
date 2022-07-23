@@ -48,7 +48,7 @@ body {
     z-index: 0;
     position: relative;
     padding: 70px 0 4rem;
-    overflow-y: hidden;
+    overflow: hidden;
 
     @include media-breakpoint-up(xxl) {
         padding: 90px 0 4rem;

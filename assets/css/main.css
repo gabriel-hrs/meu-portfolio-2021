@@ -84,7 +84,7 @@ body {
   z-index: 0;
   position: relative;
   padding: 70px 0 4rem;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 @media (min-width: 1400px) {

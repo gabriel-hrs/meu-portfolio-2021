@@ -1,7 +1,7 @@
 <!-- trocar https://ghdesign.dev/ por http://127.0.0.1/dev/meu-portfolio-2021/ ou https://gabriel-hrs.github.io/meu-portfolio-2021/ -->
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en-US">
 
 <head>
     <script nonce="gtm-1" async src="https://www.googletagmanager.com/gtag/js?id=UA-181465797-1"></script>
@@ -21,8 +21,8 @@
     <meta name="googlebot" content="index, follow" />
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="pragma" content="no-cache" />
-    <title>Gabriel Henrique - Designer e Desenvolvedor</title>
-    <meta name="description" content="Desenvolvedor web e Designer Digital." />
+    <title>Gabriel Henrique - Designer and Developer</title>
+    <meta name="description" content="Web Developer and Digital Designer." />
 
     <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
 
@@ -34,7 +34,7 @@
 
     <meta property="og:locale" content="pt_BR">
     <meta property="og:url" content="https://ghdesign.dev/">
-    <meta property="og:title" content="Gabriel Henrique - Designer e Desenvolvedor">
+    <meta property="og:title" content="Gabriel Henrique - Designer and Developer">
     <meta property="og:site_name" content="Gabriel Henrique">
     <meta property="og:description" content="">
     <meta property="og:image" content="https://ghdesign.dev/assets/images/thumb.webp">
@@ -97,6 +97,19 @@
 </head>
 
 <body>
+    <div id="cookie-banner" class="cookie-banner" data-aos="fade-up">
+        <div class="cookie-banner-popup modal fade show" tabindex="-1" aria-labelledby="exampleModalLabel" aria-modal="true" role="dialog"">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p>We use cookies to personalize content and improve your experience. For more information, visit our <a href="https://ghdesign.dev/privacy-policy">External Privacy Notice.</a></p>
+                        <button type="button" id="btn-accept-cookies" class="btn btn-primary">Accept and Proceed</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
     <header id="header" class="nav-expand">
@@ -152,27 +165,27 @@
             <button class="navbar-toggler btn-transparent" type="button" data-toggle="collapse" data-target="#main-menu"
                 aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-                <span class="sr-only" aria-hidden="true">Menu lateral</span>
+                <span class="sr-only" aria-hidden="true">Lateral menu</span>
             </button>
 
             <ul id="main-menu" class="collapse navbar-collapse navbar-container navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" title="Projetos" href="http://127.0.0.1/dev/meu-portfolio-2021#projects">Projetos</a>
+                    <a class="nav-link" title="Projects" href="http://127.0.0.1/dev/meu-portfolio-2021#projects">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" title="Sobre" href="http://127.0.0.1/dev/meu-portfolio-2021#about">Sobre</a>
+                    <a class="nav-link" title="About" href="http://127.0.0.1/dev/meu-portfolio-2021#about">About</a>
                 </li>
                 <li class="nav-item language-item">
                     <div class="dropdown">
                         <button class="dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" data-toggle="dropdown" aria-expanded="false">
-                            <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/icone-portugues.webp" alt="Ícone de bandeira do Brasil." width="327" height="147" />
-                                <span class="sr-only" aria-hidden="true">Mudar para versão do site em português</span>
+                            <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/icone-ingles.webp" alt="United States flag icon." width="327" height="147" />
+                            <span class="sr-only" aria-hidden="true">Switch to English version of the website</span>                           
                         </button>
                         
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="https://ghdesign.dev/en">
-                                <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/icone-ingles.webp" alt="Ícone de bandeira dos Estados Unidos." width="327" height="147" />
-                                <span class="sr-only" aria-hidden="true">Mudar para versão do site em inglês</span>
+                            <li><a class="dropdown-item" href="https://ghdesign.dev">
+                                <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/icone-portugues.webp" alt="Brazil flag icon." width="327" height="147" />
+                                <span class="sr-only" aria-hidden="true">Switch to Portuguese version of the site</span>
                             </a></li>
                         </ul>
                     </div>
@@ -183,7 +196,7 @@
                         appearance="toggle"
                         remember=""
                         permanent="true"
-                        aria-label="Mudar para modo escuro ou modo claro"
+                        aria-label="Switch to dark mode or light mode"
                     ></dark-mode-toggle>
                 </li>
             </ul>
@@ -194,40 +207,39 @@
         <section class="initial-banner">
             <div class="banner-text" data-aos="fade-left">
                 <h1 class="gradient-underline very-long-title">Gabriel<br /> Henrique</h1>
-                <p class="banner-description">Desenvolvedor web e Designer Digital. Experiência em desenvolvimento de
-                    sites e aplicativos, foco em desenvolvimento Front-end de projetos relacionados à Acessibilidade e
-                    Usabilidade.</p>
+                <p class="banner-description">Eeb developer and Digital designer. Experience in developing websites and applications, focus on Front-end development of projects related to Accessibility and
+                    Usability.</p>
             </div>
 
             <div class="picture-image my-photo">
                 <img class="light-effect light-effect-before" loading="lazy"
                     src="https://ghdesign.dev/assets/images/light-effect.svg"
-                    alt="Imagem ilustrativa abstrata de pontinhos formando degradê entre azul e vermelho." width="500"
+                    alt="Abstract illustrative image of dots forming a gradient between blue and red." width="500"
                     height="135" data-aos="fade-right" data-aos-delay="3000" />
                 <img class="image" loading="lazy"
                     src="https://ghdesign.dev/assets/images/gabriel-henrique-com-sombra.webp"
-                    alt="Foto do Gabriel Henrique, com braços cruzados e recorte da imagem na altura da cintura."
+                    alt="Photo of Gabriel Henrique, with arms crossed and cutout of the image at waist height."
                     width="450" height="655" data-aos="zoom-in" data-aos-delay="1000" />
                 <img class="light-effect light-effect-after" loading="lazy"
                     src="https://ghdesign.dev/assets/images/light-effect.svg"
-                    alt="Imagem ilustrativa abstrata de pontinhos formando degradê entre azul e vermelho." width="500"
+                    alt="Abstract illustrative image of dots forming a gradient between blue and red." width="500"
                     height="135" data-aos="fade-left" data-aos-delay="3000" />
             </div>
         </section>
 
         <section class="projects-section">
-            <h2 id="projects" class="gradient-underline very-long-title">Meus<br /> projetos</h2>
+            <h2 id="projects" class="gradient-underline very-long-title">My<br /> projects</h2>
 
             <div class="section-grid">
                 <article id="buscofem-project" class="project-item" data-aos="fade-up">
                     <div id="buscofem-link" class="project-link" data-content-modal="buscofem-content"
                         aria-expanded="false">
                         <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/buscofem-thumb.webp"
-                            alt="Imagem da captura de tela do site de Buscofem." width="327" height="147" />
+                            alt="Screenshot image from Buscofem's website." width="327" height="147" />
 
                         <div class="project-text">
                             <h3 class="project-title">Buscofem</h3>
-                            <span class="project-description">Website e Blog</span>
+                            <span class="project-description">Website and Blog</span>
                         </div>
                     </div>
                 </article>
@@ -236,11 +248,11 @@
                     <div id="buscopan-link" class="project-link" data-content-modal="buscopan-content"
                         aria-expanded="false">
                         <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/buscopan-thumb.webp"
-                            alt="Imagem da captura de tela do site de Buscopan." width="327" height="147" />
+                            alt="Screenshot image from Buscopan's website." width="327" height="147" />
 
                         <div class="project-text">
                             <h3 class="project-title">Buscopan</h3>
-                            <span class="project-description">Website e Blog</span>
+                            <span class="project-description">Website and Blog</span>
                         </div>
                     </div>
                 </article>
@@ -249,11 +261,11 @@
                     <div id="neoquimica-link" class="project-link" data-content-modal="neoquimica-content"
                         aria-expanded="false">
                         <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/neoquimica-thumb.webp"
-                            alt="Imagem da captura de tela do site de Neo Química." width="327" height="147" />
+                            alt="Screenshot image from Neo Química's website." width="327" height="147" />
 
                         <div class="project-text">
                             <h3 class="project-title">Neo Química</h3>
-                            <span class="project-description">Website e Blog</span>
+                            <span class="project-description">Website and Blog</span>
                         </div>
                     </div>
                 </article>
@@ -262,11 +274,11 @@
                     <div id="tamarine-link" class="project-link" data-content-modal="tamarine-content"
                         aria-expanded="false">
                         <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/tamarine-thumb.webp"
-                            alt="Imagem da captura de tela do site de Tamarine." width="327" height="147" />
+                            alt="Screenshot image from Tamarine's website." width="327" height="147" />
 
                         <div class="project-text">
                             <h3 class="project-title">Tamarine</h3>
-                            <span class="project-description">Website e Blog</span>
+                            <span class="project-description">Website and Blog</span>
                         </div>
                     </div>
                 </article>
@@ -275,11 +287,11 @@
                     <div id="addera-link" class="project-link" data-content-modal="addera-content"
                         aria-expanded="false">
                         <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/addera-thumb.webp"
-                            alt="Imagem da captura de tela do site de Addera." width="327" height="147" />
+                            alt="Screenshot image from Addera's website." width="327" height="147" />
 
                         <div class="project-text">
                             <h3 class="project-title">Addera</h3>
-                            <span class="project-description">Website e Blog</span>
+                            <span class="project-description">Website and Blog</span>
                         </div>
                     </div>
                 </article>
@@ -288,12 +300,12 @@
                     <div id="acessibilidade-e-usabilidade-link" class="project-link"
                         data-content-modal="acessibilidade-e-usabilidade-content" aria-expanded="false">
                         <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/wcsp2020.webp"
-                            alt="Imagem do vídeo da palestra Accessibilidade no evento WordCamp São Paulo." width="327"
+                            alt="Video image of the Accessibility lecture at the WordCamp São Paulo event." width="327"
                             height="166" />
 
                         <div class="project-text">
-                            <h3 class="project-title">Acessibilidade e Usabilidade</h3>
-                            <span class="project-description">Palestra - WCSP2020</span>
+                            <h3 class="project-title">Accessibility and Usability</h3>
+                            <span class="project-description">Talk - WCSP2020</span>
                         </div>
                     </div>
                 </article>
@@ -302,11 +314,11 @@
                     <div id="afronte-link" class="project-link" data-content-modal="afronte-content"
                         aria-expanded="false">
                         <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/afronte-thumb.webp"
-                            alt="Imagem do banner principal do projeto Afronte." width="327" height="243" />
+                            alt="Image of the main banner of the Afronte project." width="327" height="243" />
 
                         <div class="project-text">
                             <h3 class="project-title">Afronte</h3>
-                            <span class="project-description">Aplicativo + Wearable</span>
+                            <span class="project-description">Mobile app + Wearable</span>
                         </div>
                     </div>
                 </article>
@@ -315,12 +327,12 @@
                     <div id="integracao-link" class="project-link" data-content-modal="integracao-content"
                         aria-expanded="false">
                         <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/integracao-thumb.webp"
-                            alt="Imagem de captura de tela da página de abertura do site de Integração." width="327"
+                            alt="Screenshot image of the Integration site homepage." width="327"
                             height="244" />
 
                         <div class="project-text">
-                            <h3 class="project-title">Integração - Escola de Negócios</h3>
-                            <span class="project-description">Website e E-commerce</span>
+                            <h3 class="project-title">Integration - Business School</h3>
+                            <span class="project-description">Website and E-commerce</span>
                         </div>
                     </div>
                 </article>
@@ -328,11 +340,11 @@
                 <article id="mural-project" class="project-item mansonry" data-aos="fade-up">
                     <div id="mural-link" class="project-link" data-content-modal="mural-content" aria-expanded="false">
                         <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/mural-thumb.webp"
-                            alt="Imagem do banner principal do projeto Mural." width="327" height="316" />
+                            alt="Image of the main banner of the Mural project." width="327" height="316" />
 
                         <div class="project-text">
-                            <h3 class="project-title">Mural</h3>
-                            <span class="project-description">Aplicativo + Website</span>
+                            <h3 class="project-title">Wall</h3>
+                            <span class="project-description">Mobile app + Website</span>
                         </div>
                     </div>
                 </article>
@@ -341,12 +353,12 @@
                     <div id="interacao-humano-computador-link" class="project-link"
                         data-content-modal="interacao-humano-computador-content" aria-expanded="false">
                         <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/ihc-thumb.webp"
-                            alt="Imagem do primeiro slide da palestra Interação Humano-Computador." width="327"
+                            alt="Image of the first slide of the Human-Computer Interaction talk." width="327"
                             height="181" />
 
                         <div class="project-text">
-                            <h3 class="project-title">Interação Humano-Computador</h3>
-                            <span class="project-description">Palestra</span>
+                            <h3 class="project-title">Human-Computer Interaction</h3>
+                            <span class="project-description">Talk</span>
                         </div>
                     </div>
                 </article>
@@ -359,8 +371,8 @@
                             height="303" />
 
                         <div class="project-text">
-                            <h3 class="project-title">Revista Master</h3>
-                            <span class="project-description">Website e Blog</span>
+                            <h3 class="project-title">Master Magazine</h3>
+                            <span class="project-description">Website and Blog</span>
                         </div>
                     </div>
                 </article>
@@ -370,12 +382,12 @@
                         data-content-modal="priscila-kiguchi–microfisioterapia-content" aria-expanded="false">
                         <img class="image" loading="lazy"
                             src="https://ghdesign.dev/assets/images/priscilakiguchi-thumb.webp"
-                            alt="Imagem de captura de tela da página inicial do site da Priscila Kiguchi." width="327"
+                            alt="Screenshot image of Priscila Kiguchi's website homepage." width="327"
                             height="140" />
 
                         <div class="project-text">
-                            <h3 class="project-title">Priscila Kiguchi – Microfisioterapia</h3>
-                            <span class="project-description">Website e Blog</span>
+                            <h3 class="project-title">Priscila Kiguchi – Microphysiotherapy</h3>
+                            <span class="project-description">Website and Blog</span>
                         </div>
                     </div>
                 </article>
@@ -385,11 +397,11 @@
                         data-content-modal="brunch-content" aria-expanded="false">
                         <img class="image" loading="lazy"
                             src="https://ghdesign.dev/assets/images/brunch-thumb.webp"
-                            alt="Imagem de captura de tela da página inicial do site da agência Brunch." width="1259"
+                            alt="Screenshot image of the Brunch agency website homepage." width="1259"
                             height="576" />
 
                         <div class="project-text">
-                            <h3 class="project-title">Brunch - agência de creators</h3>
+                            <h3 class="project-title">Brunch - Creators agency</h3>
                             <span class="project-description">Website</span>
                         </div>
                     </div>
@@ -400,11 +412,11 @@
                         data-content-modal="cerqueira-leite-content" aria-expanded="false">
                         <img class="image" loading="lazy"
                             src="https://ghdesign.dev/assets/images/cerqueira-leite-thumb.webp"
-                            alt="Imagem de captura de tela da página inicial do site da Fundação Cerqueira Leite." width="1259"
+                            alt="Screenshot image of the Cerqueira Leite Foundation website homepage." width="1259"
                             height="576" />
 
                         <div class="project-text">
-                            <h3 class="project-title">Fundação<br /> Cerqueira Leite</h3>
+                            <h3 class="project-title">Foundation<br /> Cerqueira Leite</h3>
                             <span class="project-description">Website</span>
                         </div>
                     </div>
@@ -414,34 +426,34 @@
 
         <section class="about-section">
             <div class="section-text">
-                <h2 id="about" class="gradient-underline very-short-title">Sobre</h2>
+                <h2 id="about" class="gradient-underline very-short-title">About</h2>
 
                 <p class="section-description">
-                    Meu nome é Gabriel Henrique e comecei minha jornada em tecnologia fazendo o curso técnico de
-                    Programação de Jogos.<br />
-                    Hoje sou formado em Design Digital e a cada dia me interesso ainda mais pelo mundo digital, pela
-                    internet e suas conexões em volta.<br />
-                    Meu primeiro emprego foi como estagiário em Web Designer com foco em WordPress. Atualmente trabalho
-                    como Desenvolvedor Front-end Pleno com foco em SEO e performance.<br />
-                    Caso queira entrar em contato, minhas redes sociais estão localizadas no rodapé do site, ou por <a
-                        href="mailto:gabriel.henrique7087@gmail.com?subject=Olá,Gabriel"
-                        target="_blank">email<br />(gabriel.henrique7087@gmail.com).</a>
+                    My name is Gabriel Henrique and I started my journey in technology taking the technical course in
+                    Game Programming.<br />
+                    Today I am graduated in Digital Design and every day I am even more interested in the digital world,
+                    internet and its connections around it.<br />
+                    My first job was as an intern in Web Designer with a focus on WordPress. Currently work
+                    as a Full Front-end Developer focused on SEO and performance.<br />
+                    If you want to get in touch, my social networks are located at the footer of the site, or by <a
+                        href="mailto:gabriel.henrique7087@gmail.com?subject=Hello,Gabriel"
+                        target="_blank">e-mail<br />(gabriel.henrique7087@gmail.com).</a>
                 </p>
 
                 <a class="base-link" href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K2545194H2"
-                    target="_blank">Link para Lattes</a>
+                    target="_blank">Lattes link</a>
             </div>
 
             <div class="section-link">
-                <p class="section-description">Meu currículo:</p>
+                <p class="section-description">My resume:</p>
 
                 <a class="btn btn-gradient btn-icon"
-                    href="https://ghdesign.dev/assets/Curriculo-Gabriel-Henrique.pdf" target="_blank"
+                    href="https://ghdesign.dev/assets/Curriculo-Gabriel-Henrique(EN).pdf" target="_blank"
                     rel="noopener noreferrer"
-                    title="Visualizar arquivo do currículo">
+                    title="View curriculum file">
                     Ver currículo
                     <img class="icon" loading="lazy" src="https://ghdesign.dev/assets/images/download-icon.webp"
-                        alt="Ícone de seta e barra virada para baixo, representando baixar o arquivo do currículo." width="20"
+                        alt="Arrow icon and downward facing bar, representing downloading the curriculum file." width="20"
                         height="20" />
                 </a>
             </div>
@@ -451,19 +463,19 @@
     <section id="buscofem-content" class="content-modal close-modal start-d-none">
         <div class="loader">
             <img class="loader-icon" loading="lazy" src="https://ghdesign.dev/assets/images/loader.svg"
-                alt="Ícone de círculo rodando enquanto carrega o conteúdo." width="200" height="200" />
+                alt="Circle icon rotating while loading content." width="200" height="200" />
         </div>
 
         <div class="images-content bg-blue">
             <div class="section-grid">
                 <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/buscofem-1.webp"
-                    alt="Imagem de captura de tela da página inicial, no site de Buscofem." />
-                <img class="image mansonry" loading="lazy" src="https://ghdesign.dev/assets/images/buscofem-2.webp"
-                    alt="Imagem de captura de tela da página do produto Buscofem." />
+                    alt="Screenshot image of the home page, on the website of Buscofem." />
+                    <img class="image mansonry" loading="lazy" src="https://ghdesign.dev/assets/images/buscofem-2.webp"
+                    alt="Product page screenshot of Buscofem." />
                 <img class="image mansonry" loading="lazy" src="https://ghdesign.dev/assets/images/buscofem-3.webp"
-                    alt="Imagem de captura de tela da página do produto Buscofem Hot." />
+                    alt="Product page screenshot of Buscofem Hot." />
                 <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/buscofem-4.webp"
-                    alt="Imagem de captura de tela da página de Dicas, no site de Buscopan." />
+                    alt="Screenshot image of the Tips page on the website of Buscopan." />
             </div>
         </div>
 
@@ -473,16 +485,16 @@
 
                 <div class="titulo-curto">
                     <h2 class="section-title">Buscofem</h2>
-                    <span class="section-meta">Website e Blog</span>
+                    <span class="section-meta">Website and Blog</span>
                 </div>
 
                 <p>
-                    Esse projeto foi desenvolvido durante minha participação na equipe da Hypera Pharma em 2022, onde o
-                    projeto consistia em criar um novo site para o medicamento Buscofem.<br />
-                    Fiquei encarregado de desenvolver o Front-end e Back-end do site. Foram utilizados tecnologias como
-                    HTML, JS, CSS, Sass, PHP, Bootstrap, jQuery, Ajax, CMS próprio, integração com plataforma para captação de leads.<br />
+                    This project was developed during my participation in the Hypera Pharma team in 2022, where the
+                    project consisted of creating a new website for the drug Buscofem.<br />
+                    I was in charge of developing the Front-end and Back-end of the site. Technologies such as
+                    HTML, JS, CSS, Sass, PHP, Bootstrap, jQuery, Ajax, own CMS, integration with lead capture platform.<br />
                 </p>
-                <p>Site disponível no link <a href="https://www.buscofem.com.br" target="_blank">buscofem.com.br</a></p>
+                <p>Website available at the link <a href="https://www.buscofem.com.br" target="_blank">buscofem.com.br</a></p>
             </div>
         </div>
     </section>
@@ -490,19 +502,19 @@
     <section id="buscopan-content" class="content-modal close-modal start-d-none">
         <div class="loader">
             <img class="loader-icon" loading="lazy" src="https://ghdesign.dev/assets/images/loader.svg"
-                alt="Ícone de círculo rodando enquanto carrega o conteúdo." width="200" height="200" />
+                alt="Circle icon rotating while loading content." width="200" height="200" />
         </div>
 
         <div class="images-content bg-blue">
             <div class="section-grid">
                 <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/buscopan-1.webp"
-                    alt="Imagem de captura de tela da página inicial, no site de Buscopan." />
+                    alt="Screenshot image of the home page, on the website of Buscopan." />
                 <img class="image mansonry" loading="lazy" src="https://ghdesign.dev/assets/images/buscopan-2.webp"
-                    alt="Imagem de captura de tela da página de produtos, no site de Buscopan." />
+                    alt="Screenshot image of the products page on the website of Buscopan." />
                 <img class="image mansonry" loading="lazy" src="https://ghdesign.dev/assets/images/buscopan-3.webp"
-                    alt="Imagem de captura de tela da página de calculadora de gotas, no site de Buscopan." />
+                    alt="Screenshot image of the drops calculator page, on the Buscopan website." />
                 <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/buscopan-4.webp"
-                    alt="Imagem de captura de tela da página de comparação entre os produtos, no site de Buscopan." />
+                    alt="Screenshot image of the comparison page between the products on the Buscopan website." />
             </div>
         </div>
 
@@ -512,16 +524,16 @@
 
                 <div class="titulo-curto">
                     <h2 class="section-title">Buscopan</h2>
-                    <span class="section-meta">Website e Blog</span>
+                    <span class="section-meta">Website and Blog</span>
                 </div>
 
                 <p>
-                    Esse projeto foi desenvolvido durante minha participação na equipe da Hypera Pharma em 2022, onde o
-                    projeto consistia em criar um novo site para o medicamento Buscopan.<br />
-                    Fiquei encarregado de desenvolver o Front-end e Back-end do site. Foram utilizados tecnologias como
-                    HTML, JS, CSS, Sass, PHP, Bootstrap, jQuery, Ajax, CMS próprio, integração com plataforma para captação de leads.<br />
+                    This project was developed during my participation in the Hypera Pharma team in 2022, where the
+                    project consisted of creating a new website for the drug Buscopan.<br />
+                    I was in charge of developing the Front-end and Back-end of the site. Technologies such as
+                    HTML, JS, CSS, Sass, PHP, Bootstrap, jQuery, Ajax, own CMS, integration with lead capture platform.<br />
                 </p>
-                <p>Site disponível no link <a href="https://www.buscopan.com.br" target="_blank">buscopan.com.br</a></p>
+                <p>Website available at the link <a href="https://www.buscopan.com.br" target="_blank">buscopan.com.br</a></p>
             </div>
         </div>
     </section>
@@ -529,19 +541,19 @@
     <section id="neoquimica-content" class="content-modal close-modal start-d-none">
         <div class="loader">
             <img class="loader-icon" loading="lazy" src="https://ghdesign.dev/assets/images/loader.svg"
-                alt="Ícone de círculo rodando enquanto carrega o conteúdo." width="200" height="200" />
+                alt="Circle icon rotating while loading content." width="200" height="200" />
         </div>
 
         <div class="images-content bg-blue">
             <div class="section-grid">
                 <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/neoquimica-1.webp"
-                    alt="Imagem de captura de tela da página inicial, no site de Neo Química." />
+                    alt="Screenshot image of the home page, on the website of Neo Química." />
                 <img class="image mansonry" loading="lazy" src="https://ghdesign.dev/assets/images/neoquimica-2.webp"
-                    alt="Imagem de captura de tela da página de produtos Genéricos, no site de Neo Química." />
+                    alt="Screenshot image of the Generic products page on the Neo Química website." />
                 <img class="image mansonry" loading="lazy" src="https://ghdesign.dev/assets/images/neoquimica-3.webp"
-                    alt="Imagem de captura de tela da página de notícias, no site de Neo Química." />
+                    alt="Screenshot image of the news page on the Neo Química website." />
                 <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/neoquimica-4.webp"
-                    alt="Imagem de captura de tela da página de profissionais da farmácia, no site de Neo Química." />
+                    alt="Screenshot image of the pharmacy professionals page on the Neo Química website." />
             </div>
         </div>
 
@@ -551,16 +563,16 @@
 
                 <div class="titulo-curto">
                     <h2 class="section-title">Neo Química</h2>
-                    <span class="section-meta">Website e Blog</span>
+                    <span class="section-meta">Website and Blog</span>
                 </div>
 
                 <p>
-                    Esse projeto foi desenvolvido durante minha participação na equipe da Hypera Pharma em 2022, onde o
-                    projeto consistia em criar um novo site para a marca de farmacêuticos Neo Química.<br />
-                    Fiquei encarregado de desenvolver o Front-end e Back-end do site. Foram utilizados tecnologias como
-                    HTML, JS, CSS, Sass, PHP, Bootstrap, jQuery, Ajax, CMS próprio, Isotope.js, integração com plataforma para captação de leads.<br />
+                    This project was developed during my participation in the Hypera Pharma team in 2022, where the
+                    project consisted of creating a new website for the pharmaceutical brand Neo Química.<br />
+                    I was in charge of developing the Front-end and Back-end of the site. Technologies such as
+                    HTML, JS, CSS, Sass, PHP, Bootstrap, jQuery, Ajax, own CMS, Isotope.js, integration with lead capture platform.<br />
                 </p>
-                <p>Site disponível no link <a href="https://www.neoquimica.com.br" target="_blank">neoquimica.com.br</a></p>
+                <p>Website available at the link <a href="https://www.neoquimica.com.br" target="_blank">neoquimica.com.br</a></p>
             </div>
         </div>
     </section>
@@ -568,19 +580,19 @@
     <section id="tamarine-content" class="content-modal close-modal start-d-none">
         <div class="loader">
             <img class="loader-icon" loading="lazy" src="https://ghdesign.dev/assets/images/loader.svg"
-                alt="Ícone de círculo rodando enquanto carrega o conteúdo." width="200" height="200" />
+                alt="Circle icon rotating while loading content." width="200" height="200" />
         </div>
 
         <div class="images-content bg-red">
             <div class="section-grid">
                 <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/tamarine-1.webp"
-                    alt="Imagem de captura de tela da página inicial, no site de Tamarine." />
+                    alt="Screenshot image of the home page, on the website of Tamarine." />
                 <img class="image mansonry" loading="lazy" src="https://ghdesign.dev/assets/images/tamarine-2.webp"
-                    alt="Imagem de captura de tela da página Saúde do Instestino, no site de Tamarine." />
+                    alt="Screenshot of the Gut Health page on Tamarine's website." />
                 <img class="image mansonry" loading="lazy" src="https://ghdesign.dev/assets/images/tamarine-3.webp"
-                    alt="Imagem de captura de tela da página do produto Tamarine Geléia, no site de Tamarine." />
+                    alt="Product page screenshot of Tamarine Geléia, on Tamarine's website." />
                 <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/tamarine-4.webp"
-                    alt="Imagem de captura de tela da página de Receitas, no site de Tamarine." />
+                    alt="Screenshot image of the Recipes page, on Tamarine's website." />
             </div>
         </div>
 
@@ -590,16 +602,16 @@
 
                 <div class="titulo-curto">
                     <h2 class="section-title">Tamarine</h2>
-                    <span class="section-meta">Website e Blog</span>
+                    <span class="section-meta">Website and Blog</span>
                 </div>
 
                 <p>
-                    Esse projeto foi desenvolvido durante minha participação na equipe da Hypera Pharma em 2021, onde o
-                    projeto consistia em criar um novo site para o medicamento Tamarine.<br />
-                    Fiquei encarregado de desenvolver o Front-end e Back-end do site. Foram utilizados tecnologias como
-                    HTML, JS, CSS, Sass, PHP, Bootstrap, jQuery, WordPress, Isotope.js, integração com plataforma para captação de leads.<br />
+                    This project was developed during my participation in the Hypera Pharma team in 2021, where the
+                    project consisted of creating a new website for the drug Tamarine.<br />
+                    I was in charge of developing the Front-end and Back-end of the site. Technologies such as
+                    HTML, JS, CSS, Sass, PHP, Bootstrap, jQuery, WordPress, Isotope.js, integration with platform for capturing leads.<br />
                 </p>
-                <p>Site disponível no link <a href="https://www.tamarine.com.br" target="_blank">tamarine.com.br</a></p>
+                <p>Website available at the link <a href="https://www.tamarine.com.br" target="_blank">tamarine.com.br</a></p>
             </div>
         </div>
     </section>
@@ -607,21 +619,21 @@
     <section id="addera-content" class="content-modal close-modal start-d-none">
         <div class="loader">
             <img class="loader-icon" loading="lazy" src="https://ghdesign.dev/assets/images/loader.svg"
-                alt="Ícone de círculo rodando enquanto carrega o conteúdo." width="200" height="200" />
+                alt="Circle icon rotating while loading content." width="200" height="200" />
         </div>
 
         <div class="images-content bg-red">
             <div class="section-grid">
                 <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/addera-1.webp"
-                    alt="Imagem de captura de tela da página Teste sua vitamina D, no site de Addera." width="256"
+                    alt="Screenshot of the Test Your Vitamin D page on the Addera website." width="256"
                     height="821" />
                 <img class="image mansonry" loading="lazy" src="https://ghdesign.dev/assets/images/addera-2.webp"
-                    alt="Imagem de captura de tela da página Quiz, no site de Addera." width="256" height="1860" />
+                    alt="Screenshot image of the Quiz page on the Addera website." width="256" height="1860" />
                 <img class="image mansonry" loading="lazy" src="https://ghdesign.dev/assets/images/addera-3.webp"
-                    alt="Imagem de captura de tela da página do produto Addera D3 Comprimido 1000UI, no site de Addera."
+                    alt="Product page screenshot of Addera D3 Comprimido 1000UI, on the Addera website."
                     width="256" height="1087" />
                 <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/addera-4.webp"
-                    alt="Imagem de captura de tela da página do blog, no site de Addera." width="256" height="852" />
+                    alt="Screenshot image of blog page, on the Addera website." width="256" height="852" />
             </div>
         </div>
 
@@ -632,16 +644,16 @@
 
                 <div class="titulo-curto">
                     <h2 class="section-title">Addera</h2>
-                    <span class="section-meta">Website e Blog</span>
+                    <span class="section-meta">Website and Blog</span>
                 </div>
                 
                 <p>
-                    Esse projeto foi desenvolvido durante minha participação da equipe da Hypera Pharma em 2021, onde o
-                    projeto consistia em criar um novo site para o medicamento Addera.<br />
-                    Fiquei encarregado de desenvolver o Front-end e Back-end do site. Foram utilizados tecnologias como
-                    HTML, JS, CSS, Sass, PHP, Bootstrap, jQuery e WordPress.<br />
+                    This project was developed during my participation in the Hypera Pharma team in 2021, where the
+                    project consisted of creating a new website for the drug Addera.<br />
+                    I was in charge of developing the Front-end and Back-end of the site. Technologies such as
+                    HTML, JS, CSS, Sass, PHP, Bootstrap, jQuery and WordPress.<br />
                 </p>
-                <p>Site disponível no link <a href="https://www.addera.com.br" target="_blank">addera.com.br</a></p>
+                <p>Website available at the link <a href="https://www.addera.com.br" target="_blank">addera.com.br</a></p>
             </div>
         </div>
     </section>
@@ -649,7 +661,7 @@
     <section id="acessibilidade-e-usabilidade-content" class="content-modal close-modal start-d-none">
         <div class="loader">
             <img class="loader-icon" loading="lazy" src="https://ghdesign.dev/assets/images/loader.svg"
-                alt="Ícone de círculo rodando enquanto carrega o conteúdo." width="200" height="200" />
+                alt="Circle icon rotating while loading content." width="200" height="200" />
         </div>
 
         <div class="images-content bg-blue">
@@ -665,17 +677,17 @@
                 <button id="acessibilidade-e-usabilidade-btn" class="btn-close-modal" class="project-link"
                     data-content-modal="acessibilidade-e-usabilidade-content" aria-expanded="false">X</button>
 
-                <h2 class="section-title">Acessibilidade e Usabilidade</h2>
-                <span class="section-meta">Palestra - WCSP2020</span>
+                <h2 class="section-title">Accessibility and Usability</h2>
+                <span class="section-meta">Talk - WCSP2020</span>
                 <p>
-                    A palestra Acessibilidade e Usabilidade em Design Digital foi realizada no ano de 2020, durante o
-                    evento WordCamp SP 2020. Foi abordado uma introdução sobre Acessibilidade, como se encontra no
-                    Brasil, para quem somos acessíveis, Inclusão Digital, além de práticas acessíveis na web, alguns
-                    conceitos de Usabilidade e a relação entre WordPress e Acessibilidade.<br /><br />
-                    É possível ver o vídeo gravado ao vivo no dia da palestra por esse link.<br /><br />
-                    Os slides da palestra estão disponíveis <span class="desktop">ao lado</span><span
-                        class="mobile">logo abaixo</span>:<a class="sr-only" aria-hidden="true"
-                        href="#slides-acessibilidade">Ir até slides da palestra</a><br />
+                    The lecture Accessibility and Usability in Digital Design was held in 2020, during the
+                    WordCamp SP 2020 event. An introduction to Accessibility was addressed, as found in
+                    Brazil, for whom we are accessible, Digital Inclusion, in addition to practices accessible on the web, some
+                    Usability concepts and the relationship between WordPress and Accessibility.<br /><br />
+                    You can view the video recorded live on the day of the lecture through this link.<br /><br />
+                    Talk slides are available <span class="desktop">next to</span><span
+                        class="mobile">Right below</span>:<a class="sr-only" aria-hidden="true"
+                        href="#slides-acessibilidade">Go to lecture slides</a><br />
                 </p>
             </div>
         </div>
@@ -684,7 +696,7 @@
     <section id="afronte-content" class="content-modal close-modal start-d-none">
         <div class="loader">
             <img class="loader-icon" loading="lazy" src="https://ghdesign.dev/assets/images/loader.svg"
-                alt="Ícone de círculo rodando enquanto carrega o conteúdo." width="200" height="200" />
+                alt="Circle icon rotating while loading content." width="200" height="200" />
         </div>
 
         <div class="images-content bg-blue">
@@ -706,25 +718,25 @@
 
                 <div class="titulo-curto">
                     <h2 class="section-title">Afronte</h2>
-                    <span class="section-meta">Aplicativo + Wearable</span>
+                    <span class="section-meta">Mobile app + Wearabledera website</span>
                 </div>
 
                 <p>
-                    Esse projeto foi criado durante o 6º semestre da graduação de Design Digital da Universidade Anhembi
-                    Morumbi, pelo grupo Afronte no ano de 2018. O projeto surgiu como uma alternativa à segurança da
-                    mulher negra no Brasil. Onde seria desenvolvido acessórios vestíveis com tecnologias que
-                    disponibilizariam a localização da mulher, até um contato por mensagem direta ou ligação para a
-                    Delegacia da Mulher.<br />
-                    Durante o projeto foram realizadas pesquisas para a análise e criação da proposta do projeto. Como
-                    resultado foram criadas a parte visual do projeto contendo moodboard, iconografia, paleta de cores,
-                    tipografia, wireframe, wireflow e layout do app. Além da parte conceitual e resultados das pesquisas
-                    como personas e jornada do usuário.<br />
-                    O acessório foi criado com o Arduino, integrando com o aplicativo desenvolvido com o MIT App
+                    This project was created during the 6th semester of the Digital Design graduation at Universidade Anhembi
+                    Morumbi, by the Afronte group in 2018. The project emerged as an alternative to the security of the
+                    black woman in Brazil. Where would be developed wearable accessories with technologies that
+                    provide the location of the woman, even a contact by direct message or call to the
+                    Women's Police Station.<br />
+                    During the project, research was carried out for the analysis and creation of the project proposal. As
+                    As a result, the visual part of the project was created, containing moodboard, iconography, color palette,
+                    typography, wireframe, wireflow and app layout. In addition to the conceptual part and research results
+                    like personas and user journey.<br />
+                    The accessory was created with Arduino, integrating with the application developed with the MIT App
                     Inventor.<br />
                 </p>
-                <p>Os slides da palestra estão disponíveis <span class="desktop">ao lado</span><span class="mobile">logo
-                        abaixo</span>:<a class="sr-only" aria-hidden="true" href="#slides-afronte">Ir até slides da
-                        palestra</a></p>
+                <p>Lecture slides are available <span class="desktop">next to</span><span class="mobile">soon
+                    below</span>:<a class="sr-only" aria-hidden="true" href="#slides-afronte">Go to slides of
+                        lecture</a></p>
             </div>
         </div>
     </section>
@@ -732,16 +744,16 @@
     <section id="integracao-content" class="content-modal close-modal start-d-none">
         <div class="loader">
             <img class="loader-icon" loading="lazy" src="https://ghdesign.dev/assets/images/loader.svg"
-                alt="Ícone de círculo rodando enquanto carrega o conteúdo." width="200" height="200" />
+                alt="Circle icon rotating while loading content." width="200" height="200" />
         </div>
 
         <div class="images-content bg-blue">
             <div class="section-grid">
                 <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/integracao-1.webp"
-                    alt="Imagem de captura de tela da página inicial, no site de Integração." width="544"
+                    alt="Screenshot image of the home page, on the website of Integração." width="544"
                     height="285" />
                 <img class="image mansonry" loading="lazy" src="https://ghdesign.dev/assets/images/integracao-2.webp"
-                    alt="Imagem de captura de tela da página A Integração (sobre), no site de Integração." width="544"
+                    alt="Screenshot image of The Integration (about) page on the Integration site." width="544"
                     height="1171" />
             </div>
         </div>
@@ -753,19 +765,19 @@
                     
                 <div class="titulo-curto">
                     <h2 class="section-title">Integração</h2>
-                    <span class="section-meta">Website e E-commerce</span>
+                    <span class="section-meta">Website and E-commerce</span>
                 </div>
 
                 <p>
-                    Participei das etapas de desenvolvido Front-end e Back-end deste site, durante os serviços prestados
-                    para a Haste Design no ano de 2020.<br />
-                    As etapas de Design foram realizadas pela agência Gotcha!<br />
-                    Foram utilizadas tecnologias como WordPress, criação de tema personalizado, criação de plugin
-                    personalizado, loja virtual com WooCommerce, Sass, Bootstrap, Swiper Slider, HTML, CSS, JavaScript e
-                    PHP. Foram usadas estruturas como grids e sliders responsivos, além de animações e interações com
-                    alguns componentes.<br />
+                    Participated in the Front-end and Back-end development stages of this website, during the services provided
+                    for Haste Design in the year 2020.<br />
+                    The design steps were carried out by the agency Gotcha!<br />
+                    Technologies such as WordPress, custom theme creation, plugin creation
+                    custom, webshop with WooCommerce, Sass, Bootstrap, Swiper Slider, HTML, CSS, JavaScript and
+                    PHP. Structures such as responsive grids and sliders were used, as well as animations and interactions with
+                    some components.<br />
                 </p>
-                <p>Site disponível no link <a href="https://integracao.com.br" target="_blank">integracao.com.br</a></p>
+                <p>Website available at the link <a href="https://integracao.com.br" target="_blank">integracao.com.br</a></p>
             </div>
         </div>
     </section>
@@ -773,7 +785,7 @@
     <section id="mural-content" class="content-modal close-modal start-d-none">
         <div class="loader">
             <img class="loader-icon" loading="lazy" src="https://ghdesign.dev/assets/images/loader.svg"
-                alt="Ícone de círculo rodando enquanto carrega o conteúdo." width="200" height="200" />
+                alt="Circle icon rotating while loading content." width="200" height="200" />
         </div>
 
         <div class="images-content bg-blue">
@@ -781,9 +793,9 @@
                 <iframe id="slides-mural" class="slides" src="//www.slideshare.net/slideshow/embed_code/key/e7NNHXHNzZl54J" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen></iframe>
                 <iframe class="video" width="750" height="422" src="https://www.youtube.com/embed/I4qnQYM3Elg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <embed class="pdf" src="https://ghdesign.dev/assets/poster-mural.pdf" width="500" height="750" type="application/pdf">
-                <a class="btn btn-outline-white btn-icon" href="https://github.com/gabriel-hrs/mural-2020" target="_blank" rel="noopener noreferrer" title="Acessar repositório de código do projeto Mural">
-                    Acessar repositório do aplicativo
-                    <img class="icon" loading="lazy" src="https://ghdesign.dev/assets/images/code-icon.webp" alt="Ícone ilustrativo, representando código ou programação." width="20" height="20" />
+                <a class="btn btn-outline-white btn-icon" href="https://github.com/gabriel-hrs/mural-2020" target="_blank" rel="noopener noreferrer" title="Access Mural project code repository">
+                    Access application repository
+                    <img class="icon" loading="lazy" src="https://ghdesign.dev/assets/images/code-icon.webp" alt="Illustrative icon, representing code or programming." width="20" height="20" />
                 </a>
             </div>
         </div>
@@ -795,26 +807,26 @@
 
                 <div class="titulo-curto">
                     <h2 class="section-title">Mural</h2>
-                    <span class="section-meta">Aplicativo e Website</span>
+                    <span class="section-meta">Mobile app e Website</span>
                 </div>
 
                 <p>
-                    Esse projeto foi criado durante o 8º semestre da graduação de Design Digital da Universidade Anhembi
-                    Morumbi, pelo grupo Mural no ano de 2019, como TCC do curso. O projeto surgiu como uma metodologia
-                    que agregaria o ensino de história em escolas no Brasil.<br />
-                    Durante o projeto foram realizadas pesquisas para a análise e criação da proposta do projeto. Como
-                    resultado foram criadas a parte visual do projeto contendo moodboard, iconografia, paleta de cores,
-                    tipografia, wireframe, wireflow e layout do app. Além da parte conceitual e resultados das pesquisas
-                    como personas e jornada do usuário.<br />
-                    Foram criadas peças como um poster científico, uma animação explicando o projeto e seus produtos, um
-                    Canvas contendo o modelo de negócios do projeto, uma plataforma web para disponibilizar o
-                    aplicativo, onde no momento está disponível apenas para Android (em desenvolvimento). A plataforma
-                    web foi criada usando a plataforma WordPress e o aplicativo foi criado usando a plataforma Apache
-                    Cordova, HTML, CSS, JavaScript, além da integração com o banco de dados Firebase.<br />
+                    This project was created during the 8th semester of the Digital Design graduation at Universidade Anhembi
+                    Morumbi, by the Mural group in 2019, as TCC of the course. The project emerged as a methodology
+                    that would aggregate the teaching of history in schools in Brazil.<br />
+                    During the project, research was carried out for the analysis and creation of the project proposal. As
+                    As a result, the visual part of the project was created, containing moodboard, iconography, color palette,
+                    typography, wireframe, wireflow and app layout. In addition to the conceptual part and research results
+                    like personas and user journey.<br />
+                    Pieces were created such as a scientific poster, an animation explaining the project and its products, a
+                    Canvas containing the project's business model, a web platform to provide the
+                    app, where it is currently only available for Android (under development). the platform
+                    web was created using the WordPress platform and the application was created using the Apache platform
+                    Cordova, HTML, CSS, JavaScript, plus Firebase database integration.<br />
                 </p>
-                <p>Os slides da palestra estão disponíveis <span class="desktop">ao lado</span><span class="mobile">logo
-                        abaixo</span>:<a class="sr-only" aria-hidden="true" href="#slides-mural">Ir até slides da
-                        palestra</a></p>
+                <p>Lecture slides are available <span class="desktop">nexto to</span><span class="mobile">soon
+                    below</span>:<a class="sr-only" aria-hidden="true" href="#slides-mural">Go to slides of
+                        lecture</a></p>
             </div>
         </div>
     </section>
@@ -822,7 +834,7 @@
     <section id="interacao-humano-computador-content" class="content-modal close-modal start-d-none">
         <div class="loader">
             <img class="loader-icon" loading="lazy" src="https://ghdesign.dev/assets/images/loader.svg"
-                alt="Ícone de círculo rodando enquanto carrega o conteúdo." width="200" height="200" />
+                alt="Circle icon rotating while loading content." width="200" height="200" />
         </div>
 
         <div class="images-content bg-blue">
@@ -838,18 +850,18 @@
                 <button id="interacao-humano-computador-btn" class="btn-close-modal" class="project-link"
                     data-content-modal="interacao-humano-computador-content" aria-expanded="false">X</button>
 
-                <h2 class="section-title gradient-underline very-long-title">Interação<br /> Humano-Computador</h2>
-                <span class="section-meta">Palestra</span>
+                <h2 class="section-title gradient-underline very-long-title">Interaction<br /> Human-Computer</h2>
+                <span class="section-meta">Talk</span>
                 <p>
-                    Iniciação Científica realizada no ano de 2019, durante a graduação de Design Digital pela
-                    Universidade Anhembi Morumbi. Durante a Iniciação Científica foram realizadas pesquisas e análises
-                    com a orientadora Suzete Venturelli, onde pode-se aprofundar sobre a relação da Usabilidade e
-                    Acessibilidade no Design Digital, iniciando pelo tema Interação Humano-Computador.<br /><br />
-                    Essa Iniciação foi apresentada no evento 19º CONIC SEMESP, realizado na Universidade Anhembi
-                    Morumbi. Segue abaixo os slides usados na apresentação.<br /><br />
-                    Os slides da palestra estão disponíveis <span class="desktop">ao lado</span><span
-                        class="mobile">logo abaixo</span>:<a class="sr-only" aria-hidden="true"
-                        href="#slides-interacao-humano-computador">Ir até slides da palestra</a><br />
+                    Scientific Initiation held in 2019, during the Digital Design graduation by
+                    Anhembi Morumbi University. During the Scientific Initiation, research and analysis were carried out
+                    with the advisor Suzete Venturelli, where one can delve deeper into the relationship between Usability and
+                    Accessibility in Digital Design, starting with the Human-Computer Interaction theme.<br /><br />
+                    This Initiation was presented at the 19th CONIC SEMESP event, held at Anhembi University
+                    Morumbi. Below are the slides used in the presentation.<br /><br />
+                    Lecture slides are available <span class="desktop">next to</span><span
+                        class="mobile">right below</span>:<a class="sr-only" aria-hidden="true"
+                        href="#slides-interacao-humano-computador">Go to lecture slides</a><br />
                 </p>
             </div>
         </div>
@@ -858,22 +870,22 @@
     <section id="revista-master-content" class="content-modal close-modal start-d-none">
         <div class="loader">
             <img class="loader-icon" loading="lazy" src="https://ghdesign.dev/assets/images/loader.svg"
-                alt="Ícone de círculo rodando enquanto carrega o conteúdo." width="200" height="200" />
+                alt="Circle icon rotating while loading content." width="200" height="200" />
         </div>
 
         <div class="images-content bg-red">
             <div class="section-grid">
                 <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/content-master-1.webp"
-                    alt="Imagem do wireframe da página inicial, no site da Revista Master." width="256" height="623" />
+                    alt="Wireframe image of the home page, on the Master Magazine website." width="256" height="623" />
                 <img class="image mansonry" loading="lazy"
                     src="https://ghdesign.dev/assets/images/content-master-2.webp"
-                    alt="Imagem do layout da página inicial, no site da Revista Master." width="256" height="798" />
+                    alt="Image of the layout of the home page, on the Master Magazine website." width="256" height="798" />
                 <img class="image mansonry" loading="lazy"
                     src="https://ghdesign.dev/assets/images/content-master-3.webp"
-                    alt="Imagem do layout da página da categoria de Judô de Post, no site da Revista Master."
+                    alt="Image of the layout of the page of the Judo category by Post, on the Master Magazine website."
                     width="256" height="388" />
                 <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/content-master-4.webp"
-                    alt="Imagem do layout da página Edições antigas, no site da Revista Master." width="256"
+                    alt="Image of the layout of the Old Editions page, on the Master Magazine website." width="256"
                     height="528" />
             </div>
         </div>
@@ -883,18 +895,18 @@
                 <button id="revista-master-btn" class="btn-close-modal" class="project-link"
                     data-content-modal="revista-master-content" aria-expanded="false">X</button>
 
-                <h2 class="section-title">Revista Master</h2>
-                <span class="section-meta">Website e Blog</span>
+                <h2 class="section-title">Master Magazine</h2>
+                <span class="section-meta">Website and Blog</span>
                 <p>
-                    Esse projeto foi desenvolvido durante um freelance em 2019, onde foi realizada a pesquisa e criação
-                    da parte visual do site, além do desenvolvimento do mesmo.<br />
-                    O projeto tem como objetivo a criação de um novo site para a Revista Master, focada em modalidades
-                    de artes marciais. Após as etapas de pesquisas, análises e demonstrações para a cliente, chegou-se
-                    no resultado do layout.<br />
-                    A partir disso foi-se desenvolvido o site na plataforma WordPress, integrando suas redes sociais,
-                    chat com WhatsApp, Newsletter e gerenciamento de anúncios entre as notícias.
+                    This project was developed during a freelance in 2019, where the research and creation was carried out
+                    the visual part of the site, in addition to its development.<br />
+                    The project aims to create a new website for Revista Master, focused on
+                    of martial arts. After the stages of research, analysis and demonstrations for the client, it was
+                    in the layout result.<br />
+                    From this, the site was developed on the WordPress platform, integrating its social networks,
+                    chat with WhatsApp, Newsletter and ad management between the news.
                 </p>
-                <p>Site disponível no link <a href="https://www.revistamaster.com.br"
+                <p>Website available at the link <a href="https://www.revistamaster.com.br"
                         target="_blank">revistamaster.com.br</a></p>
             </div>
         </div>
@@ -903,21 +915,21 @@
     <section id="brunch-content" class="content-modal close-modal start-d-none">
         <div class="loader">
             <img class="loader-icon" loading="lazy" src="https://ghdesign.dev/assets/images/loader.svg"
-                alt="Ícone de círculo rodando enquanto carrega o conteúdo." width="200" height="200" />
+                alt="Circle icon rotating while loading content." width="200" height="200" />
         </div>
 
         <div class="images-content bg-red">
             <div class="section-grid">
                 <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/brunch-1.webp"
-                    alt="Imagem da página inicial, no site da Brunch." />
+                    alt="Image of the home page, on the Brunch website." />
                 <img class="image mansonry" loading="lazy"
                     src="https://ghdesign.dev/assets/images/brunch-2.webp"
-                    alt="Imagem da página de serviços, no site da Brunch." />
+                    alt="Image of the services page on the Brunch website." />
                 <img class="image mansonry" loading="lazy"
                     src="https://ghdesign.dev/assets/images/brunch-3.webp"
-                    alt="Imagem da página de serviços, no site da Brunch." />
+                    alt="Image of the services page on the Brunch website." />
                 <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/brunch-4.webp"
-                    alt="Imagem da página de serviços, no site da Brunch." />
+                    alt="Image of the services page on the Brunch website." />
             </div>
         </div>
 
@@ -927,16 +939,16 @@
                     data-content-modal="brunch-content" aria-expanded="false">X</button>
 
                 <div class="titulo-curto">
-                    <h2 class="section-title">Brunch - agência de creators</h2>
+                    <h2 class="section-title">Brunch - Creators agency</h2>
                     <span class="section-meta">Website</span>
                 </div>
 
                 <p>
-                    Esse projeto foi desenvolvido durante os serviços prestados para a Haste Design no ano de 2019, onde foi realizado somente o desenvolvimento do site.<br />
-                    Foram utilizadas tecnologias como WordPress, criação de tema personalizado, Sass, Bootstrap, Owl Carousel 2, HTML, CSS e PHP.<br />
-                    Foram usadas estruturas como grids e sliders responsivos durante o desenvolvimento.<br />
+                    This project was developed during the services provided to Haste Design in 2019, where only the development of the website was carried out.<br />
+                    Technologies such as WordPress, custom theme creation, Sass, Bootstrap, Owl Carousel 2, HTML, CSS and PHP were used.<br />
+                    Frameworks such as grids and responsive sliders were used during development.<br />
                 </p>
-                <p>Site disponível no link <a href="https://www.brunch.ag" target="_blank">brunch.ag</a></p>
+                <p>Website available at the link <a href="https://www.brunch.ag" target="_blank">brunch.ag</a></p>
             </div>
         </div>
     </section>
@@ -944,21 +956,21 @@
     <section id="cerqueira-leite-content" class="content-modal close-modal start-d-none">
         <div class="loader">
             <img class="loader-icon" loading="lazy" src="https://ghdesign.dev/assets/images/loader.svg"
-                alt="Ícone de círculo rodando enquanto carrega o conteúdo." width="200" height="200" />
+                alt="Circle icon rotating while loading content." width="200" height="200" />
         </div>
 
         <div class="images-content bg-red">
             <div class="section-grid">
                 <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/cerqueira-leite-1.webp"
-                    alt="Imagem da página inicial, no site da Fundação Cerqueira Leite." />
+                    alt="Image of the home page, on the Cerqueira Leite Foundation website." />
                 <img class="image mansonry" loading="lazy"
                     src="https://ghdesign.dev/assets/images/cerqueira-leite-2.webp"
-                    alt="Imagem da página de projetos, no site da Fundação Cerqueira Leite." />
+                    alt="Image of the projects page, on the Cerqueira Leite Foundation website." />
                 <img class="image mansonry" loading="lazy"
                     src="https://ghdesign.dev/assets/images/cerqueira-leite-3.webp"
-                    alt="Imagem da página de balanço social, no site da Fundação Cerqueira Leite." />
+                    alt="Image of the social report page on the Cerqueira Leite Foundation website." />
                 <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/cerqueira-leite-4.webp"
-                    alt="Imagem da página de acontece (blog), no site da Fundação Cerqueira Leite." />
+                    alt="Image of the event page (blog), on the Cerqueira Leite Foundation website." />
             </div>
         </div>
 
@@ -967,14 +979,14 @@
                 <button id="brunch-btn" class="btn-close-modal" class="project-link"
                     data-content-modal="cerqueira-leite-content" aria-expanded="false">X</button>
 
-                <h2 class="section-title">Fundação Cerqueira Leite</h2>
+                <h2 class="section-title">Cerqueira Leite Foundation</h2>
                 <span class="section-meta">Website</span>
                 <p>
-                    Esse projeto foi desenvolvido durante os serviços prestados para a Haste Design no ano de 2019, onde foi realizado as etapas de design, criação visual do site e o desenvolvimento do site.<br />
-                    Foram utilizadas tecnologias como WordPress, criação de tema personalizado, Sass, Bootstrap, Owl Carousel 2, HTML, CSS e PHP.<br />
-                    Foram usadas estruturas como grids responsivos durante o desenvolvimento.<br />
+                    This project was developed during the services provided to Haste Design in 2019, where the stages of design, visual creation of the website and website development were carried out.<br />
+                    Technologies such as WordPress, custom theme creation, Sass, Bootstrap, Owl Carousel 2, HTML, CSS and PHP were used.<br />
+                    Frameworks such as responsive grids were used during development.<br />
                 </p>
-                <p>Site disponível no link <a href="https://fundacaocerqueiraleite.org.br/" target="_blank">fundacaocerqueiraleite.org.br</a></p>
+                <p>Website available at the link <a href="https://fundacaocerqueiraleite.org.br/" target="_blank">fundacaocerqueiraleite.org.br</a></p>
             </div>
         </div>
     </section>
@@ -982,18 +994,18 @@
     <section id="priscila-kiguchi–microfisioterapia-content" class="content-modal close-modal start-d-none">
         <div class="loader">
             <img class="loader-icon" loading="lazy" src="https://ghdesign.dev/assets/images/loader.svg"
-                alt="Ícone de círculo rodando enquanto carrega o conteúdo." width="200" height="200" />
+                alt="Circle icon rotating while loading content." width="200" height="200" />
         </div>
 
         <div class="images-content bg-red">
             <div class="section-grid">
                 <img class="image" loading="lazy" src="https://ghdesign.dev/assets/images/priscila-1.webp"
-                    alt="Imagem de captura de tela da seção de tratamentos, no site da Priscila Kiguchi." width="544"
+                    alt="Screenshot image of the treatments section on Priscila Kiguchi's website." width="544"
                     height="240" />
                 <img class="image mansonry" loading="lazy" src="https://ghdesign.dev/assets/images/priscila-2.webp"
-                    alt="Imagem de captura da seção de carrossel de posts, no site da Priscila Kiguchi." width="544"
+                    alt="Image taken from the post carousel section on Priscila Kiguchi's website." width="544"
                     height="248" />
-                <img class="image mansonry" loading="lazy" src="https://ghdesign.dev/assets/images/priscila-3.webp" alt="Imagem de captura da seção de tratamentos, no site da Priscila Kiguchi." width="544" height="251" />
+                <img class="image mansonry" loading="lazy" src="https://ghdesign.dev/assets/images/priscila-3.webp" alt="Capture image of the treatments section, on Priscila Kiguchi's website." width="544" height="251" />
             </div>
         </div>
 
@@ -1002,15 +1014,15 @@
                 <button id="priscila-kiguchi–microfisioterapia-btn" class="btn-close-modal" class="project-link"
                     data-content-modal="priscila-kiguchi–microfisioterapia-content" aria-expanded="false">X</button>
 
-                <h2 class="section-title">Priscila Kiguchi<br /> – microfisioterapia</h2>
-                <span class="section-meta">Website e Blog</span>
+                <h2 class="section-title">Priscila Kiguchi<br /> – microphysiotherapy</h2>
+                <span class="section-meta">Website and Blog</span>
                 <p>
-                    Esse site foi desenvolvido durante os serviços prestados para a Haste Design no ano de 2018.<br />
-                    Foram utilizadas tecnologias como WordPress, criação de tema personalizado, Sass, Bootstrap, Owl
-                    Carousel 2, HTML, CSS e PHP.<br />
-                    Foram usadas estruturas como grids e sliders responsivos durante o desenvolvimento.<br />
+                    This website was developed during the services provided to Haste Design in 2018.<br />
+                    Technologies such as WordPress, custom theme creation, Sass, Bootstrap, Owl were used
+                    Carousel 2, HTML, CSS and PHP.<br />
+                    Frameworks such as grids and responsive sliders were used during development.<br />
                 </p>
-                <p>Site disponível no link <a href="https://www.priscilakiguchi.com.br/" target="_blank">priscilakiguchi.com.br/</a></p>
+                <p>Website available at the link <a href="https://www.priscilakiguchi.com.br/" target="_blank">priscilakiguchi.com.br/</a></p>
             </div>
         </div>
     </section>
@@ -1021,36 +1033,36 @@
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.linkedin.com/in/gabriel-hrs/" target="_blank">
                         <img class="icon" loading="lazy" src="https://ghdesign.dev/assets/images/linkedin.webp"
-                            alt="Ícone do logo do LinkedIn." width="40" height="40" />
+                            alt="Logo icon of LinkedIn." width="40" height="40" />
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://github.com/gabriel-hrs" target="_blank">
                         <img class="icon" loading="lazy" src="https://ghdesign.dev/assets/images/github.webp"
-                            alt="Ícone do logo do GitHub." width="40" height="40" />
+                            alt="Logo icon of GitHub." width="40" height="40" />
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://twitter.com/gabrielhrs98" target="_blank">
                         <img class="icon" loading="lazy" src="https://ghdesign.dev/assets/images/twitter.webp"
-                            alt="Ícone do logo do Twitter." width="40" height="40" />
+                            alt="Logo icon of Twitter." width="40" height="40" />
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://codepen.io/gabriel-hrs" target="_blank">
                         <img class="icon" loading="lazy" src="https://ghdesign.dev/assets/images/codepen.webp"
-                            alt="Ícone do logo do CodePen." width="40" height="40" />
+                            alt="Logo icon of CodePen." width="40" height="40" />
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://profiles.wordpress.org/gabrielhenrique/" target="_blank">
                         <img class="icon" loading="lazy" src="https://ghdesign.dev/assets/images/wordpress.webp"
-                            alt="Ícone do logo da organização WordPress(.org)." width="40" height="40" />
+                            alt="Organization logo icon of WordPress(.org)." width="40" height="40" />
                     </a>
                 </li>
             </ul>
 
-            <span class="copyright">Copyright © 2021 Gabriel Henrique</span>
+            <span class="copyright">Copyright © 2022 Gabriel Henrique</span>
         </div>
     </footer>
 

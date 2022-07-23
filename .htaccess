@@ -1,0 +1,88 @@
+#
+# FCKeditor - The text editor for internet
+# Copyright (C) 2003-2006 Frederico Caldeira Knabben
+#
+# Licensed under the terms of the GNU Lesser General Public License:
+# 		http://www.opensource.org/licenses/lgpl-license.php
+#
+# For further information visit:
+# 		http://www.fckeditor.net/
+#
+# "Support Open Source software. What about a donation today?"
+#
+# -----------------------------------------------------------------------------
+#
+# On some specific Linux installations you could face problems with Firefox.
+# It could give you errors when loading the editor saying that some illegal
+# characters were found (three strange chars in the beginning of the file).
+# This could happen if you map the .js or .css files to PHP, for example.
+#
+# Those characters are the Byte Order Mask (BOM) of the Unicode encoded files.
+# All FCKeditor files are Unicode encoded.
+#
+# Just rename this file to ".htaccess" and leave it in the editor directory.
+# There are no security issues on doing it. It just sets the ".js" and ".css"
+# files to their correct content types.
+#
+
+AddType application/x-javascript .js
+AddType text/css .css
+
+SetEnv session.use_cookies='1';
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+	ErrorDocument 404 https://www.ghdesign.dev/404.html
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^home/?$ index.html [NC,L]
+
+	RewriteRule ^en/?$ index.html [NC,L]
+	RewriteRule ^politica-de-privacidade/?$ politica-de-privacidade.html [NC,L]
+	RewriteRule ^privacy-policy/?$ privacy-policy.html [NC,L]
+</IfModule>
+
+<IfModule mod_deflate.c>
+ 	<IfModule mod_setenvif.c>
+		<IfModule mod_headers.c>
+			Header set X-XSS-Protection "1; mode=block"
+			Header always append X-Frame-Options SAMEORIGIN
+			Header set X-Content-Type-Options nosniff
+			Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+			SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+			RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+		</IfModule>
+	</IfModule>
+	<IfModule filter_module>
+		FilterDeclare COMPRESS
+		FilterProvider COMPRESS DEFLATE "%{Content_Type} = 'text/html'"
+		FilterProvider COMPRESS DEFLATE "%{Content_Type} = 'text/css'"
+		FilterProvider COMPRESS DEFLATE "%{Content_Type} = 'text/plain'"
+		FilterProvider COMPRESS DEFLATE "%{Content_Type} = 'text/xml'"
+		FilterProvider COMPRESS DEFLATE "%{Content_Type} = 'text/x-component'"
+		FilterProvider COMPRESS DEFLATE "%{Content_Type} = 'application/javascript'"
+		FilterProvider COMPRESS DEFLATE "%{Content_Type} = 'application/json'"
+		FilterProvider COMPRESS DEFLATE "%{Content_Type} = 'application/xml'"
+		FilterProvider COMPRESS DEFLATE "%{Content_Type} = 'application/xhtml+xml'"
+		FilterProvider COMPRESS DEFLATE "%{Content_Type} = 'application/rss+xml'"
+		FilterProvider COMPRESS DEFLATE "%{Content_Type} = 'application/atom+xml'"
+		FilterProvider COMPRESS DEFLATE "%{Content_Type} = 'application/vnd.ms-fontobject'"
+		FilterProvider COMPRESS DEFLATE "%{Content_Type} = 'image/svg+xml'"
+		FilterProvider COMPRESS DEFLATE "%{Content_Type} = 'image/x-icon'"
+		FilterProvider COMPRESS DEFLATE "%{Content_Type} = 'application/x-font-ttf'"
+		FilterProvider COMPRESS DEFLATE "%{Content_Type} = 'font/opentype'"
+		FilterChain COMPRESS
+		FilterProtocol COMPRESS DEFLATE change=yes;byteranges=no
+		</IfModule>
+		<IfModule !mod_filter.c>
+		AddOutputFilterByType DEFLATE text/html text/plain text/css application/json
+		AddOutputFilterByType DEFLATE application/javascript
+		AddOutputFilterByType DEFLATE text/xml application/xml text/x-component
+		AddOutputFilterByType DEFLATE application/xhtml+xml application/rss+xml application/atom+xml
+		AddOutputFilterByType DEFLATE image/x-icon image/svg+xml application/vnd.ms-fontobject application/x-font-ttf font/opentype
+	</IfModule>
+</IfModule>
+
+Options -MultiViews -Indexes
