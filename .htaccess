@@ -33,13 +33,13 @@ SetEnv session.use_cookies='1';
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 
-	# ErrorDocument 404 https://www.ghdesign.dev/404.html
+	ErrorDocument 404 https://www.ghdesign.dev/404.html
 
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteRule ^home/?$ index.html [NC,L]
+	# RewriteRule ^home/?$ index.html [NC,L]
 
-	RewriteRule ^en/?$ index-en.html [NC,L]
+	RewriteRule ^en/?$ version-english.html [NC,L]
 	RewriteRule ^politica-de-privacidade/?$ politica-de-privacidade.html [NC,L]
 	RewriteRule ^privacy-policy/?$ privacy-policy.html [NC,L]
 </IfModule>
