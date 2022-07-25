@@ -229,6 +229,12 @@ body {
   bottom: 1rem;
 }
 
+@media (max-width: 767.98px) {
+  #cookie-banner {
+    right: 0;
+  }
+}
+
 .cookie-banner-popup {
   text-align: center;
   position: relative;
@@ -244,9 +250,6 @@ body {
 @media (max-width: 767.98px) {
   .cookie-banner-popup {
     padding: 15px;
-    left: 10px;
-    right: auto;
-    max-width: calc(100vw - 20px);
   }
   .cookie-banner-popup p {
     font-size: 0.785rem;
