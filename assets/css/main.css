@@ -970,6 +970,12 @@ body {
   animation: show-modal 1s cubic-bezier(0.89, 0.03, 0.58, 1) forwards;
 }
 
+@media (min-width: 992px) {
+  .content-modal#coristina-lp-content .images-content .image {
+    grid-column: 1 / span 2;
+  }
+}
+
 .content-modal#priscila-kiguchi–microfisioterapia-content .image, .content-modal#integracao-content .image {
   grid-column: 1 / span 2;
 }
