@@ -86,6 +86,7 @@ const hash_project_modals = [
     'buscopan',
     'buscofem',
     'coristina-lp',
+    'neosa',
 ];
 
 function toggleLoader() {
