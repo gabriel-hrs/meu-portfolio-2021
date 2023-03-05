@@ -110,6 +110,7 @@ let hash_project_modals = $( '.projects-section .section-grid .project-item' );
 hash_project_modals.forEach( project => {
     let id_project = project.attr( 'id' );
     id_project = id_project.replace( '-project', '' );
+    console.log( id_project );
 
     $('#' + id_project + '-link').click( {project: id_project}, showModal );
     
