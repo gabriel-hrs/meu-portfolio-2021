@@ -971,7 +971,7 @@ body {
 }
 
 @media (min-width: 992px) {
-  .content-modal#coristina-lp-content .images-content .image, .content-modal#nebacetin-lp-content .images-content .image, .content-modal#eparema-lp-content .images-content .image {
+  .content-modal#coristina-lp-content .images-content .image, .content-modal#nebacetin-content .images-content .image, .content-modal#eparema-content .images-content .image {
     grid-column: 1 / span 2;
   }
 }
