@@ -70,27 +70,6 @@ $(window).scroll(function() {
 });
 
 // Single project modal
-const hash_project_modals = [
-    'addera',
-    'acessibilidade-e-usabilidade',
-    'afronte',
-    'mural',
-    'interacao-humano-computador',
-    'integracao',
-    'revista-master',
-    'priscila-kiguchi–microfisioterapia',
-    'brunch',
-    'cerqueira-leite',
-    'tamarine',
-    'neoquimica',
-    'buscopan',
-    'buscofem',
-    'coristina-lp',
-    'neosa',
-    'nebacetin',
-    'eparema'
-];
-
 function toggleLoader() {
     if( $('.loader').hasClass('no-opacity') ) {
         $('.loader').removeClass('no-opacity');    
@@ -126,12 +105,17 @@ function hideModal( event ) {
     );
 }
 
-hash_project_modals.forEach( project => {
-    $('#' + project + '-link').click( {project: project}, showModal );
-    
-    $('#' + project + '-btn').click( {project: project}, hideModal );
+let hash_project_modals = $( '.projects-section .section-grid .project-item' );
 
-    $(document).keyup( {project: project}, function( event ) {
+hash_project_modals.forEach( project => {
+    let id_project = project.attr( 'id' );
+    id_project = id_project.replace( '-project', '' );
+
+    $('#' + id_project + '-link').click( {project: id_project}, showModal );
+    
+    $('#' + id_project + '-btn').click( {project: id_project}, hideModal );
+
+    $(document).keyup( {project: id_project}, function( event ) {
         let link = event.data.project;
         if($('#' + link + '-content').hasClass('open-modal')) {
             if ( event.key == 'Escape' ) {
