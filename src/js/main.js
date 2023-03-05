@@ -107,7 +107,8 @@ function hideModal( event ) {
 
 let hash_project_modals = $( '.projects-section .section-grid .project-item' );
 
-hash_project_modals.forEach( project => {
+for (let index = 0; index < hash_project_modals.length; index++) {
+    let project = hash_project_modals[index];
     let id_project = project.attr( 'id' );
     id_project = id_project.replace( '-project', '' );
     console.log( id_project );
@@ -124,7 +125,7 @@ hash_project_modals.forEach( project => {
             }
         }
     });
-});
+}
 
 // 
 // Cookie Banner
