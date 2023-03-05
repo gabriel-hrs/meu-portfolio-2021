@@ -87,6 +87,8 @@ const hash_project_modals = [
     'buscofem',
     'coristina-lp',
     'neosa',
+    'nebacetin',
+    'eparema'
 ];
 
 function toggleLoader() {

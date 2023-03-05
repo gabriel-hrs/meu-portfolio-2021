@@ -36,7 +36,9 @@
         animation: show-modal 1s cubic-bezier(0.89, 0.03, 0.58, 1) forwards;
     }
 
-    &#coristina-lp-content {
+    &#coristina-lp-content,
+    &#nebacetin-lp-content,
+    &#eparema-lp-content {
         .images-content {
             .image {
                 @include media-breakpoint-up(lg) {
