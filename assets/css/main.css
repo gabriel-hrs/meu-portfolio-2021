@@ -38,8 +38,8 @@ html {
 }
 
 dark-mode-toggle {
-  --dark-mode-toggle-light-icon: url(h/assets/images/dark-mode.webp);
-  --dark-mode-toggle-dark-icon: url(h/assets/images/light-mode.webp);
+  --dark-mode-toggle-light-icon: url(/assets/images/dark-mode.webp);
+  --dark-mode-toggle-dark-icon: url(/assets/images/light-mode.webp);
   --dark-mode-toggle-icon-size: 2rem;
   filter: invert(1);
 }
